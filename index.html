@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Portfolio</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Quicksand:wght@300;400;500;600;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <!-- Dark Mode -->
+  <link href="assets/css/dark-mode.css" rel="stylesheet">
+  <!-- Robot Mascot -->
+  <link href="assets/css/robot.css" rel="stylesheet">
+
+  <style>
+    /* ── Fixed toggle buttons — vertically centred with the hamburger icon ── */
+    .fixed-toggle-buttons {
+      position: fixed;
+      top: 0;
+      right: 68px;
+      height: 72px;
+      z-index: 9995;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+
+    /* Fade out when nav drawer slides open */
+    .mobile-nav-active .fixed-toggle-buttons {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .lang-toggle-btn,
+    .theme-toggle-btn {
+      background: rgba(6, 92, 194, 0.12);
+      color: #065cc2;
+      border: 1.5px solid rgba(6, 92, 194, 0.3);
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      letter-spacing: 0.5px;
+      transition: background 0.2s, transform 0.15s, color 0.2s, border-color 0.2s;
+      line-height: 1;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    .lang-toggle-btn  { padding: 6px 13px; }
+    .theme-toggle-btn { padding: 6px 10px; font-size: 13px; }
+
+    .lang-toggle-btn:hover,
+    .theme-toggle-btn:hover {
+      background: rgba(6, 92, 194, 0.2);
+      transform: scale(1.07);
+    }
+
+    /* Dark mode button overrides */
+    body.dark-mode .lang-toggle-btn,
+    body.dark-mode .theme-toggle-btn {
+      background: rgba(107, 158, 255, 0.12);
+      color: #8fb5ff;
+      border-color: rgba(107, 158, 255, 0.3);
+    }
+    body.dark-mode .lang-toggle-btn:hover,
+    body.dark-mode .theme-toggle-btn:hover {
+      background: rgba(107, 158, 255, 0.22);
+    }
+
+    /* Signature language toggle */
+    html[lang="en"] .sig-vi { display: none; }
+    html[lang="vi"] .sig-en { display: none; }
+
+    /* Mobile adjustments */
+    @media (max-width: 576px) {
+      .fixed-toggle-buttons {
+        right: 58px;
+        gap: 5px;
+        height: 60px;
+      }
+      .lang-toggle-btn  { padding: 4px 10px; font-size: 11px; }
+      .theme-toggle-btn { padding: 4px 8px;  font-size: 12px; }
+    }
+  </style>
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.webp" alt=""> -->
+        <!-- Uncomment the line below if you also wish to use an text logo -->
+        <!-- <h1 class="sitename">Style</h1>  -->
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+
+        <div class="profile-img">
+          <img src="assets/img/profile/johan.jpg" alt="" class="img-fluid rounded-circle">
+        </div>
+
+        <a href="index.html" class="logo d-flex align-items-center justify-content-center active">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.webp" alt=""> -->
+          <h1 class="sitename" data-i18n="site_name">Edin Terzić</h1>
+        </a>
+
+        <div class="social-links text-center">
+          <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+
+        <ul>
+          <li><a href="#hero" data-i18n="nav_home">Home</a></li>
+          <li><a href="#about" data-i18n="nav_about">About</a></li>
+          <li><a href="#resume" data-i18n="nav_resume">Resume</a></li>
+          <li><a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a></li>
+          <li><a href="#services" data-i18n="nav_services">Services</a></li>
+          <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- Language & Theme toggles — always visible, outside sliding nav -->
+  <div class="fixed-toggle-buttons">
+    <button id="lang-toggle" class="lang-toggle-btn" onclick="i18n.toggle()" aria-label="Switch language">VI</button>
+    <button id="theme-toggle" class="theme-toggle-btn" onclick="themeManager.toggle()" aria-label="Switch theme" title="Switch to Dark Mode">
+      <i class="bi bi-moon-fill"></i>
+    </button>
+  </div>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+      <div class="container">
+        <div class="row g-0 align-items-center">
+
+          <div class="col-lg-6 hero-content" data-aos="fade-right" data-aos-delay="100">
+            <div class="content-wrapper">
+              <h1 class="hero-title"><span data-i18n="hero_title_prefix">Creative</span> <span class="typed" data-typed-items="Designer,Developer,Freelancer,Technologist" data-i18n-typed="hero_typed"></span></h1>
+              <p class="lead" data-i18n="hero_description">I create digital experiences that inspire and engage. With a passion for clean design and innovative solutions, I transform ideas into beautiful, functional realities.</p>
+
+              <div class="hero-stats" data-aos="fade-up" data-aos-delay="200">
+                <div class="stat-item">
+                  <span class="purecounter" data-purecounter-start="0" data-purecounter-end="26" data-purecounter-duration="2">0</span>
+                  <span class="stat-label" data-i18n="hero_stat_projects_label">Projects Completed</span>
+                </div>
+                <div class="stat-item">
+                  <span class="purecounter" data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="2">0</span>
+                  <span class="stat-label" data-i18n="hero_stat_years_label">Years Experience</span>
+                </div>
+                <div class="stat-item">
+                  <span class="purecounter" data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="2">0</span>
+                  <span class="stat-label" data-i18n="hero_stat_clients_label">Happy Clients</span>
+                </div>
+              </div>
+
+              <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
+                <a href="#portfolio" class="btn btn-primary" data-i18n="hero_btn_work">View My Work</a>
+                <a href="#contact" class="btn btn-outline" data-i18n="hero_btn_contact">Get In Touch</a>
+              </div>
+
+              <div class="social-links" data-aos="fade-up" data-aos-delay="400">
+                <a href="#"><i class="bi bi-twitter"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+                <a href="#"><i class="bi bi-github"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 hero-image" data-aos="fade-left" data-aos-delay="200">
+            <div class="image-container">
+              <div class="floating-elements">
+                <div class="floating-card card-1" data-aos="zoom-in" data-aos-delay="300">
+                  <i class="bi bi-palette"></i>
+                  <span data-i18n="hero_card_1">UI/UX Design</span>
+                </div>
+                <div class="floating-card card-2" data-aos="zoom-in" data-aos-delay="400">
+                  <i class="bi bi-code-slash"></i>
+                  <span data-i18n="hero_card_2">Development</span>
+                </div>
+                <div class="floating-card card-3" data-aos="zoom-in" data-aos-delay="500">
+                  <i class="bi bi-lightning"></i>
+                  <span data-i18n="hero_card_3">Creative Ideas</span>
+                </div>
+              </div>
+              <img src="assets/img/profile/johan.jpg" alt="Portfolio Hero" class="img-fluid hero-main-image">
+              <div class="image-overlay"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container section-title">
+        <h2 data-i18n="about_title">About</h2>
+        <p data-i18n="about_subtitle">Learn more about who I am and what I do</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row align-items-center">
+
+          <div class="col-lg-5" data-aos="fade-right" data-aos-delay="200">
+            <div class="profile-image-wrapper">
+              <div class="profile-image">
+                <img src="assets/img/profile/johan.jpg" alt="Profile" class="img-fluid">
+              </div>
+              <div class="signature-section">
+                <svg class="signature" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 82" style="width:210px;height:auto;overflow:visible;display:inline-block;">
+                  <g class="sig-en">
+                    <text x="150" y="52" text-anchor="middle" font-family="'Dancing Script', 'Brush Script MT', cursive" font-weight="700" font-size="40" fill="#1e2d3d" transform="rotate(-4,150,52)">Edin Terzić</text>
+                    <path d="M20,64 C90,78 200,80 280,65" stroke="#1e2d3d" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.55"/>
+                    <path d="M274,63 Q284,64 280,72" stroke="#1e2d3d" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.55"/>
+                  </g>
+                  <g class="sig-vi">
+                    <text x="150" y="52" text-anchor="middle" font-family="'Dancing Script', 'Brush Script MT', cursive" font-weight="700" font-size="40" fill="#1e2d3d" transform="rotate(-4,150,52)">Nhật Toàn</text>
+                    <path d="M20,64 C90,78 200,80 280,65" stroke="#1e2d3d" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.55"/>
+                    <path d="M274,63 Q284,64 280,72" stroke="#1e2d3d" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.55"/>
+                  </g>
+                </svg>
+                <p class="quote" data-i18n="about_quote">Building meaningful digital experiences through creative code.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-left" data-aos-delay="300">
+            <div class="about-content">
+              <div class="intro">
+                <h2 data-i18n="about_intro_heading">Hi, I'm Brandon — a Creative Developer</h2>
+                <p data-i18n="about_intro_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+              </div>
+
+              <div class="skills-grid">
+                <div class="skill-item" data-aos="zoom-in" data-aos-delay="400">
+                  <div class="skill-icon"><i class="bi bi-palette"></i></div>
+                  <h4 data-i18n="about_skill_1_title">UI/UX Design</h4>
+                  <p data-i18n="about_skill_1_text">Crafting intuitive interfaces and seamless user experiences.</p>
+                </div>
+                <div class="skill-item" data-aos="zoom-in" data-aos-delay="450">
+                  <div class="skill-icon"><i class="bi bi-code-slash"></i></div>
+                  <h4 data-i18n="about_skill_2_title">Frontend Dev</h4>
+                  <p data-i18n="about_skill_2_text">Building responsive and performant web applications.</p>
+                </div>
+                <div class="skill-item" data-aos="zoom-in" data-aos-delay="500">
+                  <div class="skill-icon"><i class="bi bi-controller"></i></div>
+                  <h4 data-i18n="about_skill_3_title">Game Dev</h4>
+                  <p data-i18n="about_skill_3_text">Crafting interactive game experiences with Unity and C#.</p>
+                </div>
+              </div>
+
+              <div class="journey-timeline" data-aos="fade-up" data-aos-delay="300">
+                <div class="timeline-item">
+                  <div class="year">2023</div>
+                  <div class="description" data-i18n="about_timeline_1_desc">Interned at Công Ty Tin Học Miền Trung as a Computer Technician</div>
+                </div>
+                <div class="timeline-item">
+                  <div class="year">2025</div>
+                  <div class="description" data-i18n="about_timeline_2_desc">Freelancer specializing in creative website development</div>
+                </div>
+                <div class="timeline-item">
+                  <div class="year">5/2026</div>
+                  <div class="description" data-i18n="about_timeline_3_desc">Founded &amp; leading Holocraft Labs as Technical Director</div>
+                </div>
+              </div>
+
+              <div class="cta-section" data-aos="fade-up" data-aos-delay="400">
+<div class="action-buttons">
+                  <a href="#portfolio" class="btn btn-primary" data-i18n="about_btn_work">View My Work</a>
+                  <a href="#" class="btn btn-outline" data-i18n="about_btn_resume">Download Resume</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="skills-grid">
+              <div class="row g-4">
+                <div class="col-md-6" data-aos="flip-left" data-aos-delay="200">
+                  <div class="skill-card">
+                    <div class="skill-header">
+                      <i class="bi bi-code-slash"></i>
+                      <h3 data-i18n="skills_frontend_title">Frontend Development</h3>
+                    </div>
+                    <div class="skills-animation">
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">HTML/CSS</span>
+                        </div>
+                        <div class="skill-tags">Flexbox · Grid · SASS</div>
+                      </div>
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">JavaScript</span>
+                        </div>
+                        <div class="skill-tags">ES6+ · TypeScript · jQuery</div>
+                      </div>
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">React</span>
+                        </div>
+                        <div class="skill-tags">Redux · Hooks · Next.js</div>
+                      </div>
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Bootstrap</span>
+                        </div>
+                        <div class="skill-tags">Tailwind · Responsive UI</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6" data-aos="flip-left" data-aos-delay="300">
+                  <div class="skill-card">
+                    <div class="skill-header">
+                      <i class="bi bi-server"></i>
+                      <h3 data-i18n="skills_backend_title">Backend Development</h3>
+                    </div>
+                    <div class="skills-animation">
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Java</span>
+                        </div>
+                        <div class="skill-tags">Spring Boot · Maven · JPA</div>
+                      </div>
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Python</span>
+                        </div>
+                        <div class="skill-tags">Django · Flask · FastAPI</div>
+                      </div>
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">C#</span>
+                        </div>
+                        <div class="skill-tags">ASP.NET · .NET Core · LINQ</div>
+                      </div>
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">MySQL</span>
+                        </div>
+                        <div class="skill-tags">PostgreSQL · MongoDB · SQL</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6" data-aos="flip-left" data-aos-delay="400">
+                  <div class="skill-card">
+                    <div class="skill-header">
+                      <i class="bi bi-palette"></i>
+                      <h3 data-i18n="skills_design_title">Design &amp; Tools</h3>
+                    </div>
+                    <div class="skills-animation">
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Figma</span>
+                        </div>
+                        <div class="skill-tags">UI/UX · Prototyping · Wireframe</div>
+                      </div>
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Photoshop</span>
+                        </div>
+                        <div class="skill-tags">Photo Editing · Illustration</div>
+                      </div>
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Blender</span>
+                        </div>
+                        <div class="skill-tags">3D Modeling · Rendering · VFX</div>
+                      </div>
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Unity</span>
+                        </div>
+                        <div class="skill-tags">Game 2D/3D · C# Scripts · Physics</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6" data-aos="flip-left" data-aos-delay="500">
+                  <div class="skill-card">
+                    <div class="skill-header">
+                      <i class="bi bi-cloud"></i>
+                      <h3 data-i18n="skills_devops_title">Cloud &amp; DevOps</h3>
+                    </div>
+                    <div class="skills-animation">
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Docker</span>
+                        </div>
+                        <div class="skill-tags">Containers · Compose · Kubernetes</div>
+                      </div>
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Git</span>
+                        </div>
+                        <div class="skill-tags">Version Control · CI/CD · Branching</div>
+                      </div>
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Cloudflare</span>
+                        </div>
+                        <div class="skill-tags">CDN · DNS · Security</div>
+                      </div>
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">GitHub</span>
+                        </div>
+                        <div class="skill-tags">Actions · Pull Requests · Codespaces</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="skills-summary" data-aos="fade-left" data-aos-delay="200">
+              <h3 data-i18n="skills_summary_title">Professional Expertise</h3>
+              <p data-i18n="skills_summary_text">Combining technical proficiency with creative vision to deliver exceptional digital solutions.</p>
+
+              <div class="summary-stats">
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
+                  <div class="stat-circle"><i class="bi bi-trophy"></i></div>
+                  <div class="stat-info">
+                    <span class="stat-number">2+</span>
+                    <span class="stat-label" data-i18n="skills_stat_years_label">Years Experience</span>
+                  </div>
+                </div>
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="400">
+                  <div class="stat-circle"><i class="bi bi-diagram-3"></i></div>
+                  <div class="stat-info">
+                    <span class="stat-number">20+</span>
+                    <span class="stat-label" data-i18n="skills_stat_projects_label">Projects Completed</span>
+                  </div>
+                </div>
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="500">
+                  <div class="stat-circle"><i class="bi bi-people"></i></div>
+                  <div class="stat-info">
+                    <span class="stat-number">20+</span>
+                    <span class="stat-label" data-i18n="skills_stat_clients_label">Happy Clients</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skills-badges" data-aos="fade-up" data-aos-delay="600">
+                <h4 data-i18n="skills_cert_title">Certifications</h4>
+                <div class="badge-list">
+                  <div class="skill-badge">AWS Certified</div>
+                  <div class="skill-badge">Laravel Expert</div>
+                  <div class="skill-badge">Vue.js Developer</div>
+                  <div class="skill-badge">UI/UX Design</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Skills Section -->
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+
+      <div class="container section-title">
+        <h2 data-i18n="resume_title">Resume</h2>
+        <p data-i18n="resume_subtitle">My professional journey and academic background</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+            <div class="experience-section">
+              <div class="section-header">
+                <h2><i class="bi bi-briefcase"></i> <span data-i18n="resume_exp_heading">Professional Journey</span></h2>
+                <p class="section-subtitle" data-i18n="resume_exp_subtitle">A track record of delivering impactful solutions across diverse industries.</p>
+              </div>
+
+              <div class="experience-cards">
+                <div class="experience-card" data-aos="zoom-in" data-aos-delay="300">
+                  <div class="card-header">
+                    <div class="role-info">
+                      <h3 data-i18n="resume_job1_role">Technical Director</h3>
+                      <h4 data-i18n="resume_job1_company">Holocraft Labs</h4>
+                    </div>
+                    <span class="duration" data-i18n="resume_job1_duration">5/2026 - Present</span>
+                  </div>
+                  <div class="card-body">
+                    <p data-i18n="resume_job1_desc">Leading and operating the Holocraft Labs startup — driving technical strategy, product direction, and team building.</p>
+                    <ul class="achievements">
+                      <li data-i18n="resume_job1_ach1">Founded and managed the company's entire technical infrastructure</li>
+                      <li data-i18n="resume_job1_ach2">Defined product roadmap and led development of core software products</li>
+                      <li data-i18n="resume_job1_ach3">Built and mentored a cross-functional engineering team</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="experience-card" data-aos="zoom-in" data-aos-delay="400">
+                  <div class="card-header">
+                    <div class="role-info">
+                      <h3 data-i18n="resume_job2_role">Freelance Web Developer</h3>
+                      <h4 data-i18n="resume_job2_company">Self-employed</h4>
+                    </div>
+                    <span class="duration" data-i18n="resume_job2_duration">2025 - 4/2026</span>
+                  </div>
+                  <div class="card-body">
+                    <p data-i18n="resume_job2_desc">Delivered creative, high-performance websites for clients across various industries, blending modern UI/UX with full-stack development.</p>
+                  </div>
+                </div>
+
+                <div class="experience-card" data-aos="zoom-in" data-aos-delay="500">
+                  <div class="card-header">
+                    <div class="role-info">
+                      <h3 data-i18n="resume_job3_role">Computer Technician Intern</h3>
+                      <h4 data-i18n="resume_job3_company">Công Ty Tin Học Miền Trung</h4>
+                    </div>
+                    <span class="duration" data-i18n="resume_job3_duration">2023 - 2024</span>
+                  </div>
+                  <div class="card-body">
+                    <p data-i18n="resume_job3_desc">Supported hardware and software technical operations, gaining hands-on experience in computer maintenance and IT support.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+            <div class="education-section">
+              <div class="section-header">
+                <h2><i class="bi bi-mortarboard"></i> <span data-i18n="resume_edu_heading">Academic Excellence</span></h2>
+                <p class="section-subtitle" data-i18n="resume_edu_subtitle">A strong academic foundation combining theory with hands-on practice.</p>
+              </div>
+
+              <div class="education-timeline">
+                <div class="timeline-track"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Resume Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <div class="container section-title">
+        <h2 data-i18n="services_title">Services</h2>
+        <p data-i18n="services_subtitle">What I can do for you</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-stack"></i></div>
+              <h3 data-i18n="services_1_title">Digital Solutions</h3>
+              <p data-i18n="services_1_desc">End-to-end digital product development from concept to deployment, tailored to your business needs.</p>
+              <div class="card-links">
+                <a href="service-digital-solutions.html" class="link-item">
+                  <span data-i18n="services_learn_more">Learn More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-shield-check"></i></div>
+              <h3 data-i18n="services_2_title">Secure Systems</h3>
+              <p data-i18n="services_2_desc">Building robust, secure applications with industry best practices and modern security standards.</p>
+              <div class="card-links">
+                <a href="service-secure-systems.html" class="link-item">
+                  <span data-i18n="services_learn_more">Learn More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-graph-up"></i></div>
+              <h3 data-i18n="services_3_title">Growth Strategy</h3>
+              <p data-i18n="services_3_desc">Data-driven strategies to accelerate your digital growth and maximize your online presence.</p>
+              <div class="card-links">
+                <a href="service-growth-strategy.html" class="link-item">
+                  <span data-i18n="services_learn_more">Learn More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-cpu"></i></div>
+              <h3 data-i18n="services_4_title">AI Integration</h3>
+              <p data-i18n="services_4_desc">Seamlessly integrating artificial intelligence to automate processes and unlock new capabilities.</p>
+              <div class="card-links">
+                <a href="service-ai-integration.html" class="link-item">
+                  <span data-i18n="services_learn_more">Learn More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-cloud-arrow-up"></i></div>
+              <h3 data-i18n="services_5_title">Cloud Services</h3>
+              <p data-i18n="services_5_desc">Scalable cloud architecture and migration solutions for modern, resilient applications.</p>
+              <div class="card-links">
+                <a href="service-cloud.html" class="link-item">
+                  <span data-i18n="services_learn_more">Learn More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-gear"></i></div>
+              <h3 data-i18n="services_6_title">Process Automation</h3>
+              <p data-i18n="services_6_desc">Streamlining workflows through intelligent automation to boost efficiency and reduce costs.</p>
+              <div class="card-links">
+                <a href="service-automation.html" class="link-item">
+                  <span data-i18n="services_learn_more">Learn More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+
+      <div class="container section-title">
+        <h2 data-i18n="portfolio_title">Portfolio</h2>
+        <p data-i18n="portfolio_subtitle">A selection of my recent work</p>
+      </div>
+
+      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="200">
+            <li data-filter="*" class="filter-active">
+              <i class="bi bi-grid-3x3"></i> <span data-i18n="portfolio_filter_all">All Projects</span>
+            </li>
+            <li data-filter=".filter-website"><span data-i18n="portfolio_filter_website">Website</span></li>
+            <li data-filter=".filter-game"><span data-i18n="portfolio_filter_game">Game</span></li>
+            <li data-filter=".filter-mobile"><span data-i18n="portfolio_filter_mobile">Mobile</span></li>
+          </ul>
+
+          <div class="row g-4 isotope-container" data-aos="fade-up" data-aos-delay="300">
+
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-website">
+              <article class="portfolio-entry">
+                <figure class="entry-image">
+                  <img src="assets/img/logo.png" class="img-fluid" alt="Online Psychology Counseling Website" loading="lazy">
+                  <div class="entry-overlay">
+                    <div class="overlay-content">
+                      <div class="entry-meta" data-i18n="portfolio_item1_cat">Website</div>
+                      <h3 class="entry-title" data-i18n="portfolio_item1_title">Online Psychology Counseling System</h3>
+                      <div class="entry-links">
+                        <a href="assets/img/logo.png" class="glightbox" data-gallery="portfolio-gallery-website" data-glightbox="title: Online Psychology Counseling System">
+                          <i class="bi bi-arrows-angle-expand"></i>
+                        </a>
+                        <a href="#" class="project-external-link" target="_blank" rel="noopener"><i class="bi bi-arrow-right"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </figure>
+              </article>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-game">
+              <article class="portfolio-entry">
+                <figure class="entry-image">
+                  <img src="assets/img/logo5.png" class="img-fluid" alt="Shutter 2D Game" loading="lazy">
+                  <div class="entry-overlay">
+                    <div class="overlay-content">
+                      <div class="entry-meta" data-i18n="portfolio_item2_cat">Game 2D</div>
+                      <h3 class="entry-title" data-i18n="portfolio_item2_title">Shutter — 2D Game Design</h3>
+                      <div class="entry-links">
+                        <a href="assets/img/logo5.png" class="glightbox" data-gallery="portfolio-gallery-game" data-glightbox="title: Shutter — 2D Game Design">
+                          <i class="bi bi-arrows-angle-expand"></i>
+                        </a>
+                        <a href="#" class="project-external-link" target="_blank" rel="noopener"><i class="bi bi-arrow-right"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </figure>
+              </article>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-mobile">
+              <article class="portfolio-entry">
+                <figure class="entry-image">
+                  <img src="assets/img/logo_library.png" class="img-fluid" alt="BookNexus Library App" loading="lazy">
+                  <div class="entry-overlay">
+                    <div class="overlay-content">
+                      <div class="entry-meta" data-i18n="portfolio_item3_cat">Mobile App</div>
+                      <h3 class="entry-title" data-i18n="portfolio_item3_title">BookNexus — Library Management App</h3>
+                      <div class="entry-links">
+                        <a href="assets/img/logo_library.png" class="glightbox" data-gallery="portfolio-gallery-mobile" data-glightbox="title: BookNexus — Library Management App">
+                          <i class="bi bi-arrows-angle-expand"></i>
+                        </a>
+                        <a href="#" class="project-external-link" target="_blank" rel="noopener"><i class="bi bi-arrow-right"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </figure>
+              </article>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-website">
+              <article class="portfolio-entry">
+                <figure class="entry-image">
+                  <img src="assets/img/logo1.png" class="img-fluid" alt="Coffee Shop Website" loading="lazy">
+                  <div class="entry-overlay">
+                    <div class="overlay-content">
+                      <div class="entry-meta" data-i18n="portfolio_item4_cat">Website</div>
+                      <h3 class="entry-title" data-i18n="portfolio_item4_title">Coffee Shop E-Commerce Website</h3>
+                      <div class="entry-links">
+                        <a href="assets/img/logo1.png" class="glightbox" data-gallery="portfolio-gallery-website" data-glightbox="title: Coffee Shop E-Commerce Website">
+                          <i class="bi bi-arrows-angle-expand"></i>
+                        </a>
+                        <a href="#" class="project-external-link" target="_blank" rel="noopener"><i class="bi bi-arrow-right"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </figure>
+              </article>
+            </div>
+
+          </div><!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
+
+    <!-- Faq Section -->
+    <section id="faq" class="faq section">
+
+      <div class="container section-title">
+        <h2 data-i18n="faq_title">Frequently Asked Questions</h2>
+        <p data-i18n="faq_subtitle">Find answers to common questions about my work and process</p>
+      </div>
+
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
+            <div class="faq-container">
+
+              <div class="faq-item faq-active">
+                <h3 data-i18n="faq_q1">What types of projects do you work on?</h3>
+                <div class="faq-content">
+                  <p data-i18n="faq_a1">I specialize in web development, UI/UX design, and digital strategy. I work on projects ranging from personal portfolios to large-scale enterprise applications.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item">
+                <h3 data-i18n="faq_q2">What is your typical project timeline?</h3>
+                <div class="faq-content">
+                  <p data-i18n="faq_a2">Project timelines vary depending on scope and complexity. A simple website may take 2–4 weeks, while larger projects can take 3–6 months.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item">
+                <h3 data-i18n="faq_q3">Do you work with clients remotely?</h3>
+                <div class="faq-content">
+                  <p data-i18n="faq_a3">Yes, I work with clients worldwide and am fully equipped for remote collaboration using Slack, Zoom, Figma, and GitHub.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item">
+                <h3 data-i18n="faq_q4">What is your development process?</h3>
+                <div class="faq-content">
+                  <p data-i18n="faq_a4">I follow an agile approach: discovery → design → development → testing → deployment. I keep clients involved at every stage.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item">
+                <h3 data-i18n="faq_q5">Do you offer post-launch support?</h3>
+                <div class="faq-content">
+                  <p data-i18n="faq_a5">Yes, I offer post-launch maintenance and support packages. Whether it's bug fixes, updates, or new features, I'm here to help.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item">
+                <h3 data-i18n="faq_q6">How do we get started?</h3>
+                <div class="faq-content">
+                  <p data-i18n="faq_a6">Simply reach out via the contact form below or send me an email. I'll get back to you within 24 hours.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Faq Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section light-background">
+
+      <div class="container section-title">
+        <h2 data-i18n="contact_title">Contact</h2>
+        <p data-i18n="contact_subtitle">Let's work together</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-5">
+            <div class="info-box" data-aos="fade-up" data-aos-delay="200">
+              <h3 data-i18n="contact_info_title">Contact Info</h3>
+              <p data-i18n="contact_info_text">Feel free to reach out anytime. I'm always open to discussing new projects, creative ideas, or opportunities.</p>
+
+              <div class="info-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-box"><i class="bi bi-geo-alt"></i></div>
+                <div class="content">
+                  <h4 data-i18n="contact_location_title">Our Location</h4>
+                  <p data-i18n="contact_address_1">11 ngõ 7 Phạm Đình Toái, phường Vinh Phú</p>
+                  <p data-i18n="contact_address_2">tỉnh Nghệ An, 43134</p>
+                </div>
+              </div>
+
+              <div class="info-item" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon-box"><i class="bi bi-telephone"></i></div>
+                <div class="content">
+                  <h4 data-i18n="contact_phone_title">Phone Number</h4>
+                  <p data-i18n="contact_phone_value">+84 976 418 775</p>
+                </div>
+              </div>
+
+              <div class="info-item" data-aos="fade-up" data-aos-delay="500">
+                <div class="icon-box"><i class="bi bi-envelope"></i></div>
+                <div class="content">
+                  <h4 data-i18n="contact_email_title">Email Address</h4>
+                  <p data-i18n="contact_email_value">lenhattoanhello@gmail.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
+              <h3 data-i18n="contact_form_title">Get In Touch</h3>
+              <p data-i18n="contact_form_text">Have a project in mind? Let's talk about how we can bring your vision to life.</p>
+
+              <form id="contact-form" action="https://api.web3forms.com/submit" method="post" class="php-email-form">
+                <input type="hidden" name="access_key" value="07d16308-0c0d-4954-8f39-84b0b3c5b87b">
+                <input type="hidden" name="subject" value="Tin nhắn mới từ Portfolio">
+                <input type="hidden" name="from_name" value="Portfolio Contact Form">
+                <input type="checkbox" name="botcheck" style="display:none;">
+
+                <div class="row gy-4">
+
+                  <div class="col-md-6">
+                    <input type="text" name="name" class="form-control" data-i18n-placeholder="contact_placeholder_name" placeholder="Your Name" required="">
+                  </div>
+
+                  <div class="col-md-6">
+                    <input type="email" class="form-control" name="email" data-i18n-placeholder="contact_placeholder_email" placeholder="Your Email" required="">
+                  </div>
+
+                  <div class="col-12">
+                    <input type="text" class="form-control" name="message_subject" data-i18n-placeholder="contact_placeholder_subject" placeholder="Subject" required="">
+                  </div>
+
+                  <div class="col-12">
+                    <textarea class="form-control" name="message" rows="6" data-i18n-placeholder="contact_placeholder_msg" placeholder="Message" required=""></textarea>
+                  </div>
+
+                  <div class="col-12 text-center">
+                    <div class="loading" data-i18n="contact_loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message" data-i18n="contact_sent">Your message has been sent. Thank you!</div>
+                    <button type="submit" class="btn" data-i18n="contact_btn_send">Send Message</button>
+                  </div>
+
+                </div>
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-outline" id="cursor-outline"></div>
+
+  <!-- Robot AI Mascot -->
+  <div id="robot-mascot" aria-label="AI Portfolio Guide">
+    <button class="robot-close-btn" id="robot-close-btn" title="Hide assistant">×</button>
+    <div class="robot-bubble" id="robot-bubble">
+      <p id="robot-message" style="margin:0;"></p>
+    </div>
+    <div class="robot-wrapper" id="robot-wrapper">
+      <img src="assets/img/profile/Picture1.gif" alt="AI Robot Mascot" class="robot-img">
+      <div class="robot-shadow"></div>
+    </div>
+  </div>
+  <button class="robot-restore-btn" id="robot-restore-btn" title="Show assistant" aria-label="Show AI assistant">🤖</button>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© Copyright <strong class="px-1">Holocraft</strong> All Rights Reserved</p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-twitter-x"></i></a>
+        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href=""><i class="bi bi-instagram"></i></a>
+        <a href=""><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="credits">
+        Designed by Holocraft | ThorDev
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- i18n -->
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/i18n.js"></script>
+
+  <!-- Theme -->
+  <script src="assets/js/theme.js"></script>
+
+  <!-- Robot Mascot -->
+  <script src="assets/js/robot-mascot.js"></script>
+
+</body>
+
+</html>

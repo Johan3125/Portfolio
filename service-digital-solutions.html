@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Giải Pháp Kỹ Thuật Số - Portfolio</title>
+  <meta name="description" content="Phát triển sản phẩm kỹ thuật số toàn diện từ ý tưởng đến triển khai">
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Quicksand:wght@300;400;500;600;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/dark-mode.css" rel="stylesheet">
+  <link href="assets/css/service-pages.css" rel="stylesheet">
+  <link href="assets/css/robot.css" rel="stylesheet">
+
+  <style>
+    :root { --sd-c1:#065cc2; --sd-c2:#13447f; --sd-c3:#0a2d5e; --sd-ov1:6,92,194; --sd-ov2:10,45,94; }
+    .fixed-toggle-buttons{position:fixed;top:0;right:68px;height:72px;z-index:9995;display:flex;align-items:center;gap:7px;opacity:1;transition:opacity .3s ease}
+    .mobile-nav-active .fixed-toggle-buttons{opacity:0;pointer-events:none}
+    .lang-toggle-btn,.theme-toggle-btn{background:rgba(6,92,194,.12);color:#065cc2;border:1.5px solid rgba(6,92,194,.3);border-radius:20px;font-size:12px;font-weight:700;cursor:pointer;letter-spacing:.5px;transition:background .2s,transform .15s,color .2s,border-color .2s;line-height:1;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+    .lang-toggle-btn{padding:6px 13px}.theme-toggle-btn{padding:6px 10px;font-size:13px}
+    .lang-toggle-btn:hover,.theme-toggle-btn:hover{background:rgba(6,92,194,.2);transform:scale(1.07)}
+    body.dark-mode .lang-toggle-btn,body.dark-mode .theme-toggle-btn{background:rgba(107,158,255,.12);color:#8fb5ff;border-color:rgba(107,158,255,.3)}
+    body.dark-mode .lang-toggle-btn:hover,body.dark-mode .theme-toggle-btn:hover{background:rgba(107,158,255,.22)}
+    @media(max-width:576px){.fixed-toggle-buttons{right:58px;gap:5px;height:60px}.lang-toggle-btn{padding:4px 10px;font-size:11px}.theme-toggle-btn{padding:4px 8px;font-size:12px}}
+  </style>
+</head>
+
+<body class="service-details-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center"></a>
+      <nav id="navmenu" class="navmenu">
+        <div class="profile-img">
+          <img src="assets/img/profile/johan.jpg" alt="" class="img-fluid rounded-circle">
+        </div>
+        <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+          <h1 class="sitename" data-i18n="site_name">Edin Terzić</h1>
+        </a>
+        <div class="social-links text-center">
+          <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+        <ul>
+          <li><a href="index.html#hero" data-i18n="nav_home">Home</a></li>
+          <li><a href="index.html#about" data-i18n="nav_about">About</a></li>
+          <li><a href="index.html#resume" data-i18n="nav_resume">Resume</a></li>
+          <li><a href="index.html#portfolio" data-i18n="nav_portfolio">Portfolio</a></li>
+          <li><a href="index.html#services" data-i18n="nav_services">Services</a></li>
+          <li><a href="index.html#contact" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <div class="fixed-toggle-buttons">
+    <button id="lang-toggle" class="lang-toggle-btn" onclick="i18n.toggle()" aria-label="Switch language">VI</button>
+    <button id="theme-toggle" class="theme-toggle-btn" onclick="themeManager.toggle()" aria-label="Switch theme" title="Switch to Dark Mode"><i class="bi bi-moon-fill"></i></button>
+  </div>
+
+  <main class="main">
+
+    <!-- ═══ PARALLAX HERO ═══ -->
+    <section class="sd-hero">
+      <div class="sd-hero-bg" style="background-image:url('assets/img/services/services-7.webp')" data-parallax="0.45"></div>
+      <div class="sd-hero-overlay"></div>
+      <div class="sd-shape sd-shape-1" data-parallax="-0.15"></div>
+      <div class="sd-shape sd-shape-2" data-parallax="0.2"></div>
+      <div class="sd-shape sd-shape-3" data-parallax="-0.1"></div>
+      <div class="sd-shape sd-shape-4"></div>
+      <div class="sd-shape sd-shape-5" data-parallax="0.12"></div>
+      <div class="sd-shape sd-shape-6" data-parallax="-0.08"></div>
+      <div class="sd-particles">
+        <div class="sd-particle" style="left:10%;top:20%;--dur:9s;--delay:0s"></div>
+        <div class="sd-particle" style="left:25%;top:60%;--dur:12s;--delay:-2s"></div>
+        <div class="sd-particle" style="left:40%;top:35%;--dur:8s;--delay:-4s"></div>
+        <div class="sd-particle" style="left:60%;top:70%;--dur:11s;--delay:-1s"></div>
+        <div class="sd-particle" style="left:75%;top:25%;--dur:10s;--delay:-3s"></div>
+        <div class="sd-particle" style="left:85%;top:55%;--dur:7s;--delay:-5s"></div>
+        <div class="sd-particle" style="left:50%;top:80%;--dur:13s;--delay:-2.5s"></div>
+        <div class="sd-particle" style="left:15%;top:75%;--dur:9s;--delay:-1.5s"></div>
+        <div class="sd-particle" style="left:90%;top:40%;--dur:11s;--delay:-3.5s"></div>
+        <div class="sd-particle" style="left:35%;top:15%;--dur:8s;--delay:-0.5s"></div>
+      </div>
+      <div class="container">
+        <div class="sd-hero-inner" data-aos="fade-up" data-aos-delay="100">
+          <div class="sd-breadcrumb">
+            <a href="index.html">Trang chủ</a>
+            <i class="bi bi-chevron-right"></i>
+            <a href="index.html#services">Dịch vụ</a>
+            <i class="bi bi-chevron-right"></i>
+            <span>Giải Pháp Kỹ Thuật Số</span>
+          </div>
+          <div class="sd-hero-icon-wrap" data-aos="zoom-in" data-aos-delay="200">
+            <i class="bi bi-stack"></i>
+          </div>
+          <h1 data-aos="fade-up" data-aos-delay="250">Giải Pháp Kỹ Thuật Số</h1>
+          <p class="sd-lead" data-aos="fade-up" data-aos-delay="300">Phát triển sản phẩm kỹ thuật số toàn diện — từ ý tưởng ban đầu đến triển khai thực tế. Chúng tôi xây dựng các giải pháp web, mobile và hệ thống backend tối ưu cho doanh nghiệp của bạn.</p>
+          <div class="sd-hero-actions" data-aos="fade-up" data-aos-delay="350">
+            <a href="index.html#contact" class="btn-light">Liên Hệ Ngay</a>
+            <a href="index.html#services" class="btn-outline-light">Xem Tất Cả Dịch Vụ</a>
+          </div>
+        </div>
+      </div>
+      <div class="sd-scroll-hint">
+        <span>Khám phá</span>
+        <i class="bi bi-chevron-down"></i>
+      </div>
+    </section>
+
+    <!-- ═══ CONTENT ═══ -->
+    <section class="service-details section">
+      <div class="container">
+        <div class="row gy-5">
+
+          <!-- Main -->
+          <div class="col-lg-8">
+
+            <div class="sd-overview" data-aos="fade-up" data-aos-delay="100">
+              <i class="bi bi-stack sd-overview-icon"></i>
+              <h2>Giải Pháp Kỹ Thuật Số Toàn Diện</h2>
+              <p>Chúng tôi cung cấp dịch vụ phát triển phần mềm end-to-end, bao gồm thiết kế giao diện người dùng, xây dựng hệ thống backend mạnh mẽ, tích hợp API và triển khai trên nhiều nền tảng. Mỗi giải pháp được tùy chỉnh để đáp ứng đúng nhu cầu kinh doanh của bạn — từ startup nhỏ đến doanh nghiệp lớn.</p>
+            </div>
+
+            <div class="sd-features-grid" data-aos="fade-up" data-aos-delay="150">
+              <h3><i class="bi bi-lightning-charge me-2"></i>Tính Năng Nổi Bật</h3>
+              <div class="row g-3">
+                <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                  <div class="sd-feature-card">
+                    <div class="sd-feature-icon"><i class="bi bi-globe"></i></div>
+                    <h5>Phát Triển Web</h5>
+                    <p>Website và ứng dụng web hiệu suất cao, responsive, tối ưu SEO với công nghệ hiện đại nhất.</p>
+                  </div>
+                </div>
+                <div class="col-md-6" data-aos="zoom-in" data-aos-delay="250">
+                  <div class="sd-feature-card">
+                    <div class="sd-feature-icon"><i class="bi bi-phone"></i></div>
+                    <h5>Ứng Dụng Mobile</h5>
+                    <p>App iOS và Android với trải nghiệm người dùng mượt mà, tích hợp đầy đủ tính năng theo yêu cầu.</p>
+                  </div>
+                </div>
+                <div class="col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                  <div class="sd-feature-card">
+                    <div class="sd-feature-icon"><i class="bi bi-plugin"></i></div>
+                    <h5>API & Backend</h5>
+                    <p>Hệ thống backend scalable, RESTful API và microservices đảm bảo hiệu suất và độ tin cậy cao.</p>
+                  </div>
+                </div>
+                <div class="col-md-6" data-aos="zoom-in" data-aos-delay="350">
+                  <div class="sd-feature-card">
+                    <div class="sd-feature-icon"><i class="bi bi-layout-text-window"></i></div>
+                    <h5>Hệ Thống CMS</h5>
+                    <p>Nền tảng quản lý nội dung tùy chỉnh giúp bạn dễ dàng cập nhật và quản lý website của mình.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="sd-process" data-aos="fade-up" data-aos-delay="200">
+              <h3><i class="bi bi-diagram-3 me-2"></i>Quy Trình Làm Việc</h3>
+              <div class="sd-step" data-aos="fade-right" data-aos-delay="250">
+                <div class="sd-step-num">01</div>
+                <div class="sd-step-body">
+                  <h5>Phân Tích & Lên Kế Hoạch</h5>
+                  <p>Thu thập yêu cầu, phân tích business goals, xác định phạm vi dự án và lập kế hoạch chi tiết với timeline rõ ràng.</p>
+                </div>
+              </div>
+              <div class="sd-step" data-aos="fade-right" data-aos-delay="280">
+                <div class="sd-step-num">02</div>
+                <div class="sd-step-body">
+                  <h5>Thiết Kế UI/UX</h5>
+                  <p>Tạo wireframes, prototype và thiết kế giao diện đẹp mắt, dễ sử dụng với trọng tâm là trải nghiệm người dùng.</p>
+                </div>
+              </div>
+              <div class="sd-step" data-aos="fade-right" data-aos-delay="310">
+                <div class="sd-step-num">03</div>
+                <div class="sd-step-body">
+                  <h5>Phát Triển</h5>
+                  <p>Code clean, có cấu trúc rõ ràng theo các best practices, sử dụng framework và công nghệ phù hợp nhất cho dự án.</p>
+                </div>
+              </div>
+              <div class="sd-step" data-aos="fade-right" data-aos-delay="340">
+                <div class="sd-step-num">04</div>
+                <div class="sd-step-body">
+                  <h5>Kiểm Thử & QA</h5>
+                  <p>Kiểm tra kỹ lưỡng trên nhiều thiết bị và trình duyệt, đảm bảo không có lỗi trước khi ra mắt sản phẩm.</p>
+                </div>
+              </div>
+              <div class="sd-step" data-aos="fade-right" data-aos-delay="370">
+                <div class="sd-step-num">05</div>
+                <div class="sd-step-body">
+                  <h5>Triển Khai & Hỗ Trợ</h5>
+                  <p>Deploy lên production, monitoring, bảo trì và hỗ trợ kỹ thuật liên tục sau khi ra mắt.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="sd-gallery mb-4" data-aos="fade-up" data-aos-delay="250">
+              <h3><i class="bi bi-images me-2"></i>Dự Án Tiêu Biểu</h3>
+              <div class="row g-3">
+                <div class="col-md-4"><div class="sd-gallery-img"><img src="assets/img/services/services-2.webp" alt="Dự án 1" class="img-fluid rounded"></div></div>
+                <div class="col-md-4"><div class="sd-gallery-img"><img src="assets/img/services/services-7.webp" alt="Dự án 2" class="img-fluid rounded"></div></div>
+                <div class="col-md-4"><div class="sd-gallery-img"><img src="assets/img/services/services-11.webp" alt="Dự án 3" class="img-fluid rounded"></div></div>
+              </div>
+            </div>
+
+            <div class="sd-tags" data-aos="fade-up">
+              <span class="sd-tag">React</span><span class="sd-tag">Node.js</span><span class="sd-tag">Vue.js</span>
+              <span class="sd-tag">React Native</span><span class="sd-tag">PostgreSQL</span><span class="sd-tag">REST API</span>
+              <span class="sd-tag">Docker</span><span class="sd-tag">CI/CD</span>
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="sd-sidebar-card">
+              <h4><i class="bi bi-grid me-2"></i>Tất Cả Dịch Vụ</h4>
+              <ul class="sd-services-list">
+                <li><a href="service-digital-solutions.html" class="active"><i class="bi bi-stack list-icon"></i><span>Giải Pháp Kỹ Thuật Số</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-secure-systems.html"><i class="bi bi-shield-check list-icon"></i><span>Hệ Thống Bảo Mật</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-growth-strategy.html"><i class="bi bi-graph-up list-icon"></i><span>Chiến Lược Tăng Trưởng</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-ai-integration.html"><i class="bi bi-cpu list-icon"></i><span>Tích Hợp AI</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-cloud.html"><i class="bi bi-cloud-arrow-up list-icon"></i><span>Dịch Vụ Cloud</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-automation.html"><i class="bi bi-gear list-icon"></i><span>Tự Động Hóa Quy Trình</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+              </ul>
+            </div>
+
+            <div class="sd-sidebar-card">
+              <h4><i class="bi bi-info-circle me-2"></i>Thông Tin Dịch Vụ</h4>
+              <ul class="sd-info-list">
+                <li><span class="label">Thời gian:</span><span class="val">4 – 12 tuần</span></li>
+                <li><span class="label">Đội ngũ:</span><span class="val">3 – 6 chuyên gia</span></li>
+                <li><span class="label">Bàn giao:</span><span class="val">Theo milestone</span></li>
+                <li><span class="label">Hỗ trợ:</span><span class="val">6 tháng sau launch</span></li>
+                <li><span class="label">Bảo hành:</span><span class="val">12 tháng</span></li>
+              </ul>
+            </div>
+
+            <div class="sd-cta-card">
+              <h4>Bắt Đầu Dự Án Của Bạn?</h4>
+              <p>Hãy để chúng tôi biến ý tưởng của bạn thành sản phẩm kỹ thuật số thực sự.</p>
+              <ul class="cta-items">
+                <li><i class="bi bi-check-circle-fill"></i>Tư vấn miễn phí</li>
+                <li><i class="bi bi-check-circle-fill"></i>Báo giá trong 24h</li>
+                <li><i class="bi bi-check-circle-fill"></i>Không ràng buộc hợp đồng</li>
+              </ul>
+              <a href="index.html#contact" class="btn-cta">Nhận Tư Vấn Miễn Phí</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ STATS PARALLAX ═══ -->
+    <section class="sd-stats-section">
+      <div class="sd-stats-bg" data-parallax="0.3"></div>
+      <div class="sd-stats-overlay"></div>
+      <div class="sd-stats-pattern"></div>
+      <div class="container sd-stats-inner">
+        <div class="row g-4 text-center">
+          <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+            <div class="sd-stat-item">
+              <div class="sd-stat-icon"><i class="bi bi-briefcase"></i></div>
+              <div class="sd-stat-num"><span class="purecounter" data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="2">0</span><sup>+</sup></div>
+              <div class="sd-stat-label">Dự Án Hoàn Thành</div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+            <div class="sd-stat-item">
+              <div class="sd-stat-icon"><i class="bi bi-emoji-smile"></i></div>
+              <div class="sd-stat-num"><span class="purecounter" data-purecounter-start="0" data-purecounter-end="98" data-purecounter-duration="2">0</span><sup>%</sup></div>
+              <div class="sd-stat-label">Khách Hàng Hài Lòng</div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+            <div class="sd-stat-item">
+              <div class="sd-stat-icon"><i class="bi bi-clock-history"></i></div>
+              <div class="sd-stat-num"><span class="purecounter" data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="2">0</span><sup>+</sup></div>
+              <div class="sd-stat-label">Năm Kinh Nghiệm</div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+            <div class="sd-stat-item">
+              <div class="sd-stat-icon"><i class="bi bi-headset"></i></div>
+              <div class="sd-stat-num">24<sup>/7</sup></div>
+              <div class="sd-stat-label">Hỗ Trợ Kỹ Thuật</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CTA BANNER ═══ -->
+    <section class="section">
+      <div class="container">
+        <div class="sd-cta-section" data-aos="zoom-in">
+          <h3>Sẵn Sàng Bắt Đầu Dự Án?</h3>
+          <p>Liên hệ với chúng tôi ngay hôm nay để nhận tư vấn miễn phí và báo giá chi tiết cho dự án của bạn.</p>
+          <div class="cta-btns">
+            <a href="index.html#contact" class="btn-primary-cta">Liên Hệ Ngay</a>
+            <a href="index.html#portfolio" class="btn-outline-cta">Xem Portfolio</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Robot AI Mascot -->
+  <div id="robot-mascot" aria-label="AI Portfolio Guide">
+    <div class="robot-bubble" id="robot-bubble">
+      <p id="robot-message" style="margin:0;"></p>
+    </div>
+    <div class="robot-wrapper" id="robot-wrapper">
+      <img src="assets/img/profile/Picture1.gif" alt="AI Robot Mascot" class="robot-img">
+      <div class="robot-shadow"></div>
+    </div>
+  </div>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename" data-i18n="site_name">Edin Terzić</strong> <span data-i18n="footer_rights">All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-twitter-x"></i></a>
+        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href=""><i class="bi bi-instagram"></i></a>
+        <a href=""><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="credits">Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | <a href="https://bootstrapmade.com/tools/">DevTools</a></div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/robot-mascot.js"></script>
+  <script>
+  (function(){
+    var els=document.querySelectorAll('[data-parallax]');
+    if(!els.length)return;
+    function u(){var s=window.pageYOffset;els.forEach(function(e){var sp=parseFloat(e.dataset.parallax)||0;e.style.transform='translateY('+(s*sp)+'px)'});}
+    window.addEventListener('scroll',u,{passive:true});u();
+  })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,319 @@
+/*--------------------------------------------------------------
+# Dark Mode — Simple Dark Grey
+--------------------------------------------------------------*/
+
+body.dark-mode {
+  --background-color: #1b1d2b;
+  --default-color: #c2cad8;
+  --heading-color: #dde5f6;
+  --accent-color: #6b9eff;
+  --surface-color: #252838;
+  --contrast-color: #ffffff;
+
+  --nav-color: #c2cad8;
+  --nav-hover-color: #6b9eff;
+  --nav-mobile-background-color: #13141f;
+  --nav-dropdown-background-color: #252838;
+  --nav-dropdown-color: #9aaac0;
+  --nav-dropdown-hover-color: #ffffff;
+}
+
+/* Light-background sections in dark mode */
+body.dark-mode .light-background {
+  --background-color: #1f2135;
+  --surface-color: #2b2e44;
+}
+
+/* Dark-background sections (footer, etc.) in dark mode */
+body.dark-mode .dark-background {
+  --background-color: #0f1018;
+  --surface-color: #1a1c2a;
+  --accent-color: #8fb5ff;
+}
+
+/*--------------------------------------------------------------
+# Navmenu — dark sidebar background
+--------------------------------------------------------------*/
+body.dark-mode .navmenu {
+  background-color: #13141f;
+}
+
+body.dark-mode .mobile-nav-active .navmenu {
+  background-color: #13141f;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+body.dark-mode .header {
+  background-color: transparent !important;
+  border-bottom: none;
+}
+
+
+/*--------------------------------------------------------------
+# Hero section
+--------------------------------------------------------------*/
+body.dark-mode .hero {
+  background-color: var(--background-color);
+}
+
+body.dark-mode .hero::before {
+  opacity: 0.04;
+  filter: brightness(0.5);
+}
+
+body.dark-mode .hero .hero-actions .btn.btn-outline {
+  border-color: rgba(107, 158, 255, 0.5);
+  color: #6b9eff;
+}
+
+body.dark-mode .hero .hero-actions .btn.btn-outline:hover {
+  background-color: #6b9eff;
+  color: #fff;
+}
+
+body.dark-mode .hero .floating-card {
+  background: rgba(37, 40, 56, 0.92);
+  border: 1px solid rgba(107, 158, 255, 0.18);
+  backdrop-filter: blur(8px);
+}
+
+body.dark-mode .hero .image-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(27, 29, 43, 0.5) 0%,
+    rgba(107, 158, 255, 0.08) 100%
+  );
+}
+
+/*--------------------------------------------------------------
+# Section titles
+--------------------------------------------------------------*/
+body.dark-mode .section-title h2::after {
+  background-color: #6b9eff;
+}
+
+/*--------------------------------------------------------------
+# About section
+--------------------------------------------------------------*/
+body.dark-mode .about .about-content .skills-grid .skill-item {
+  background: rgba(107, 158, 255, 0.07);
+  border-color: rgba(107, 158, 255, 0.15);
+}
+
+body.dark-mode .about .about-content .journey-timeline .timeline-item {
+  background: rgba(37, 40, 56, 0.8);
+}
+
+body.dark-mode .about .about-content .journey-timeline .timeline-item:hover {
+  background: rgba(107, 158, 255, 0.08);
+}
+
+body.dark-mode .about .cta-section .fun-fact {
+  background: rgba(37, 40, 56, 0.8);
+  border: 1px solid rgba(107, 158, 255, 0.12);
+}
+
+body.dark-mode .about .btn.btn-outline {
+  border-color: rgba(107, 158, 255, 0.5);
+  color: #6b9eff;
+}
+
+/*--------------------------------------------------------------
+# Skills section
+--------------------------------------------------------------*/
+body.dark-mode .skills .skill-card {
+  background: var(--surface-color);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .skills .skill-card .skill-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+body.dark-mode .skills .skill-bar.progress {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .skills .skills-summary {
+  background: var(--surface-color);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .skills .stat-circle {
+  background: rgba(107, 158, 255, 0.12);
+  border: 2px solid rgba(107, 158, 255, 0.3);
+}
+
+body.dark-mode .skills .skill-badge {
+  background: rgba(107, 158, 255, 0.1);
+  border: 1px solid rgba(107, 158, 255, 0.25);
+  color: #8fb5ff;
+}
+
+/*--------------------------------------------------------------
+# Resume section
+--------------------------------------------------------------*/
+body.dark-mode .resume .experience-card {
+  background: var(--surface-color);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .resume .experience-card .card-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+body.dark-mode .resume .education-item .education-content {
+  background: var(--surface-color);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .resume .timeline-track {
+  background: rgba(107, 158, 255, 0.2);
+}
+
+body.dark-mode .resume .timeline-marker {
+  border-color: #6b9eff;
+  background: #1b1d2b;
+}
+
+/*--------------------------------------------------------------
+# Services section
+--------------------------------------------------------------*/
+body.dark-mode .services .service-item {
+  background: var(--surface-color);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .services .service-item:hover {
+  box-shadow: 0 8px 30px rgba(107, 158, 255, 0.12);
+  border-color: rgba(107, 158, 255, 0.2);
+}
+
+body.dark-mode .services .service-item .icon {
+  background: rgba(107, 158, 255, 0.1);
+}
+
+/*--------------------------------------------------------------
+# Portfolio section
+--------------------------------------------------------------*/
+body.dark-mode .portfolio .portfolio-filters li {
+  background: var(--surface-color);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+body.dark-mode .portfolio .portfolio-filters li.filter-active {
+  background: #6b9eff;
+  border-color: #6b9eff;
+}
+
+body.dark-mode .portfolio .entry-overlay {
+  background: rgba(19, 20, 31, 0.92);
+}
+
+/*--------------------------------------------------------------
+# Testimonials section
+--------------------------------------------------------------*/
+body.dark-mode .testimonials .testimonial-item {
+  background: var(--surface-color);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+body.dark-mode .testimonials .critic-review {
+  background: var(--surface-color);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+body.dark-mode .testimonials .overall-rating {
+  background: var(--surface-color);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/*--------------------------------------------------------------
+# FAQ section
+--------------------------------------------------------------*/
+body.dark-mode .faq .faq-item {
+  background: var(--surface-color);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+body.dark-mode .faq .faq-item.faq-active {
+  border-color: rgba(107, 158, 255, 0.3);
+  box-shadow: 0 4px 20px rgba(107, 158, 255, 0.08);
+}
+
+body.dark-mode .faq .faq-item h3 {
+  color: var(--heading-color);
+}
+
+/*--------------------------------------------------------------
+# Contact section
+--------------------------------------------------------------*/
+body.dark-mode .contact .info-box {
+  background: var(--surface-color);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+body.dark-mode .contact .info-item .icon-box {
+  background: rgba(107, 158, 255, 0.1);
+  border: 1px solid rgba(107, 158, 255, 0.2);
+}
+
+body.dark-mode .contact .contact-form {
+  background: var(--surface-color);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Form inputs */
+body.dark-mode .contact .form-control {
+  background-color: rgba(27, 29, 43, 0.8);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: var(--default-color);
+}
+
+body.dark-mode .contact .form-control::placeholder {
+  color: rgba(194, 202, 216, 0.45);
+}
+
+body.dark-mode .contact .form-control:focus {
+  background-color: rgba(27, 29, 43, 0.9);
+  border-color: rgba(107, 158, 255, 0.5);
+  color: var(--default-color);
+  box-shadow: 0 0 0 0.2rem rgba(107, 158, 255, 0.12);
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+body.dark-mode .footer {
+  background-color: #0f1018;
+}
+
+/*--------------------------------------------------------------
+# Scroll-top button
+--------------------------------------------------------------*/
+body.dark-mode .scroll-top {
+  background-color: #6b9eff;
+}
+
+/*--------------------------------------------------------------
+# Signature (invert for dark mode readability)
+--------------------------------------------------------------*/
+body.dark-mode .signature-section .signature {
+  filter: invert(1) brightness(0.8);
+}
+
+/*--------------------------------------------------------------
+# Smooth transition on theme switch
+--------------------------------------------------------------*/
+body,
+body * {
+  transition: background-color 0.3s ease, color 0.3s ease,
+              border-color 0.3s ease, box-shadow 0.3s ease;
+}

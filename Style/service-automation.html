@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Tự Động Hóa Quy Trình - Portfolio</title>
+  <meta name="description" content="Tối ưu hóa quy trình kinh doanh bằng tự động hóa thông minh và RPA">
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Quicksand:wght@300;400;500;600;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/dark-mode.css" rel="stylesheet">
+  <link href="assets/css/service-pages.css" rel="stylesheet">
+  <link href="assets/css/robot.css" rel="stylesheet">
+
+  <style>
+    :root { --sd-c1:#b45309; --sd-c2:#92400e; --sd-c3:#78350f; --sd-ov1:180,83,9; --sd-ov2:120,53,15; }
+    .fixed-toggle-buttons{position:fixed;top:0;right:68px;height:72px;z-index:9995;display:flex;align-items:center;gap:7px;opacity:1;transition:opacity .3s ease}
+    .mobile-nav-active .fixed-toggle-buttons{opacity:0;pointer-events:none}
+    .lang-toggle-btn,.theme-toggle-btn{background:rgba(6,92,194,.12);color:#065cc2;border:1.5px solid rgba(6,92,194,.3);border-radius:20px;font-size:12px;font-weight:700;cursor:pointer;letter-spacing:.5px;transition:background .2s,transform .15s,color .2s,border-color .2s;line-height:1;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+    .lang-toggle-btn{padding:6px 13px}.theme-toggle-btn{padding:6px 10px;font-size:13px}
+    .lang-toggle-btn:hover,.theme-toggle-btn:hover{background:rgba(6,92,194,.2);transform:scale(1.07)}
+    body.dark-mode .lang-toggle-btn,body.dark-mode .theme-toggle-btn{background:rgba(107,158,255,.12);color:#8fb5ff;border-color:rgba(107,158,255,.3)}
+    body.dark-mode .lang-toggle-btn:hover,body.dark-mode .theme-toggle-btn:hover{background:rgba(107,158,255,.22)}
+    @media(max-width:576px){.fixed-toggle-buttons{right:58px;gap:5px;height:60px}.lang-toggle-btn{padding:4px 10px;font-size:11px}.theme-toggle-btn{padding:4px 8px;font-size:12px}}
+    .sd-feature-card::before { background: linear-gradient(90deg, #b45309, #92400e); }
+    .sd-step-num { background: linear-gradient(135deg, #b45309, #92400e); }
+    /* Spinning gear effects in hero */
+    .sd-gear-icon {
+      position: absolute;
+      color: rgba(255,255,255,0.06);
+      font-size: 120px;
+      pointer-events: none;
+    }
+    .sd-gear-icon.spin-slow { animation: sd-gear-spin 20s linear infinite; }
+    .sd-gear-icon.spin-reverse { animation: sd-gear-spin 15s linear infinite reverse; }
+    @keyframes sd-gear-spin { from{transform:rotate(0deg);}  to{transform:rotate(360deg);} }
+  </style>
+</head>
+
+<body class="service-details-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center"></a>
+      <nav id="navmenu" class="navmenu">
+        <div class="profile-img"><img src="assets/img/profile/johan.jpg" alt="" class="img-fluid rounded-circle"></div>
+        <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+          <h1 class="sitename" data-i18n="site_name">Edin Terzić</h1>
+        </a>
+        <div class="social-links text-center">
+          <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+        <ul>
+          <li><a href="index.html#hero" data-i18n="nav_home">Home</a></li>
+          <li><a href="index.html#about" data-i18n="nav_about">About</a></li>
+          <li><a href="index.html#resume" data-i18n="nav_resume">Resume</a></li>
+          <li><a href="index.html#portfolio" data-i18n="nav_portfolio">Portfolio</a></li>
+          <li><a href="index.html#services" data-i18n="nav_services">Services</a></li>
+          <li><a href="index.html#contact" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <div class="fixed-toggle-buttons">
+    <button id="lang-toggle" class="lang-toggle-btn" onclick="i18n.toggle()" aria-label="Switch language">VI</button>
+    <button id="theme-toggle" class="theme-toggle-btn" onclick="themeManager.toggle()" aria-label="Switch theme" title="Switch to Dark Mode"><i class="bi bi-moon-fill"></i></button>
+  </div>
+
+  <main class="main">
+
+    <section class="sd-hero">
+      <div class="sd-hero-bg" style="background-image:url('assets/img/services/services-8.webp')" data-parallax="0.45"></div>
+      <div class="sd-hero-overlay"></div>
+      <!-- Spinning gear decorations -->
+      <i class="bi bi-gear-fill sd-gear-icon spin-slow" style="top:5%;right:8%"></i>
+      <i class="bi bi-gear-wide sd-gear-icon spin-reverse" style="bottom:10%;right:25%;font-size:80px"></i>
+      <i class="bi bi-gear sd-gear-icon spin-slow" style="top:40%;right:3%;font-size:60px;animation-duration:12s"></i>
+      <div class="sd-shape sd-shape-1" data-parallax="-0.15"></div>
+      <div class="sd-shape sd-shape-2" data-parallax="0.2"></div>
+      <div class="sd-shape sd-shape-3" data-parallax="-0.1"></div>
+      <div class="sd-shape sd-shape-4"></div>
+      <div class="sd-shape sd-shape-5" data-parallax="0.12"></div>
+      <div class="sd-shape sd-shape-6" data-parallax="-0.08"></div>
+      <div class="sd-particles">
+        <div class="sd-particle" style="left:10%;top:20%;--dur:9s;--delay:0s"></div>
+        <div class="sd-particle" style="left:25%;top:60%;--dur:12s;--delay:-2s"></div>
+        <div class="sd-particle" style="left:40%;top:35%;--dur:8s;--delay:-4s"></div>
+        <div class="sd-particle" style="left:60%;top:70%;--dur:11s;--delay:-1s"></div>
+        <div class="sd-particle" style="left:75%;top:25%;--dur:10s;--delay:-3s"></div>
+        <div class="sd-particle" style="left:85%;top:55%;--dur:7s;--delay:-5s"></div>
+        <div class="sd-particle" style="left:50%;top:80%;--dur:13s;--delay:-2.5s"></div>
+        <div class="sd-particle" style="left:15%;top:75%;--dur:9s;--delay:-1.5s"></div>
+        <div class="sd-particle" style="left:90%;top:40%;--dur:11s;--delay:-3.5s"></div>
+        <div class="sd-particle" style="left:35%;top:15%;--dur:8s;--delay:-0.5s"></div>
+      </div>
+      <div class="container">
+        <div class="sd-hero-inner" data-aos="fade-up" data-aos-delay="100">
+          <div class="sd-breadcrumb">
+            <a href="index.html">Trang chủ</a>
+            <i class="bi bi-chevron-right"></i>
+            <a href="index.html#services">Dịch vụ</a>
+            <i class="bi bi-chevron-right"></i>
+            <span>Tự Động Hóa Quy Trình</span>
+          </div>
+          <div class="sd-hero-icon-wrap" data-aos="zoom-in" data-aos-delay="200">
+            <i class="bi bi-gear"></i>
+          </div>
+          <h1 data-aos="fade-up" data-aos-delay="250">Tự Động Hóa Quy Trình</h1>
+          <p class="sd-lead" data-aos="fade-up" data-aos-delay="300">Tối ưu hóa quy trình kinh doanh thông qua tự động hóa thông minh. Giảm tác vụ thủ công, tăng năng suất và cho phép đội ngũ của bạn tập trung vào những việc thực sự tạo ra giá trị.</p>
+          <div class="sd-hero-actions" data-aos="fade-up" data-aos-delay="350">
+            <a href="index.html#contact" class="btn-light">Liên Hệ Ngay</a>
+            <a href="index.html#services" class="btn-outline-light">Xem Tất Cả Dịch Vụ</a>
+          </div>
+        </div>
+      </div>
+      <div class="sd-scroll-hint"><span>Khám phá</span><i class="bi bi-chevron-down"></i></div>
+    </section>
+
+    <section class="service-details section">
+      <div class="container">
+        <div class="row gy-5">
+          <div class="col-lg-8">
+            <div class="sd-overview" data-aos="fade-up" data-aos-delay="100">
+              <i class="bi bi-gear sd-overview-icon"></i>
+              <h2>Tự Động Hóa Thông Minh Cho Doanh Nghiệp</h2>
+              <p>Chúng tôi phân tích, tái thiết kế và tự động hóa các quy trình kinh doanh lặp đi lặp lại của bạn. Từ RPA (Robotic Process Automation) đến workflow automation phức tạp, chúng tôi giúp bạn vận hành nhanh hơn, chính xác hơn và tiết kiệm chi phí đáng kể.</p>
+            </div>
+
+            <div class="sd-features-grid" data-aos="fade-up" data-aos-delay="150">
+              <h3><i class="bi bi-lightning-charge me-2"></i>Tính Năng Nổi Bật</h3>
+              <div class="row g-3">
+                <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                  <div class="sd-feature-card">
+                    <div class="sd-feature-icon"><i class="bi bi-robot"></i></div>
+                    <h5>RPA — Robot Process Automation</h5>
+                    <p>Bot tự động xử lý các tác vụ lặp lại như nhập liệu, xử lý hóa đơn, reconciliation nhanh và chính xác hơn con người.</p>
+                  </div>
+                </div>
+                <div class="col-md-6" data-aos="zoom-in" data-aos-delay="250">
+                  <div class="sd-feature-card">
+                    <div class="sd-feature-icon"><i class="bi bi-diagram-2"></i></div>
+                    <h5>Workflow Engine</h5>
+                    <p>Thiết kế và tự động hóa workflow phê duyệt, routing, escalation với visibility đầy đủ và audit trail.</p>
+                  </div>
+                </div>
+                <div class="col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                  <div class="sd-feature-card">
+                    <div class="sd-feature-icon"><i class="bi bi-plug"></i></div>
+                    <h5>Tích Hợp Hệ Thống</h5>
+                    <p>Kết nối CRM, ERP, HRM và các hệ thống khác để dữ liệu chảy tự động, loại bỏ việc nhập liệu thủ công.</p>
+                  </div>
+                </div>
+                <div class="col-md-6" data-aos="zoom-in" data-aos-delay="350">
+                  <div class="sd-feature-card">
+                    <div class="sd-feature-icon"><i class="bi bi-file-earmark-bar-graph"></i></div>
+                    <h5>Báo Cáo Tự Động</h5>
+                    <p>Dashboard real-time và báo cáo tự động gửi đúng người đúng lúc, không cần can thiệp thủ công.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="sd-process" data-aos="fade-up" data-aos-delay="200">
+              <h3><i class="bi bi-diagram-3 me-2"></i>Quy Trình Triển Khai</h3>
+              <div class="sd-step" data-aos="fade-right" data-aos-delay="250">
+                <div class="sd-step-num">01</div>
+                <div class="sd-step-body">
+                  <h5>Process Discovery & Mapping</h5>
+                  <p>Khảo sát và lập bản đồ toàn bộ quy trình hiện tại, xác định điểm nghẽn, tác vụ lặp lại và cơ hội tự động hóa.</p>
+                </div>
+              </div>
+              <div class="sd-step" data-aos="fade-right" data-aos-delay="280">
+                <div class="sd-step-num">02</div>
+                <div class="sd-step-body">
+                  <h5>Thiết Kế Workflow Mới</h5>
+                  <p>Tái thiết kế quy trình tối ưu với automation logic, định nghĩa trigger, conditions và exception handling.</p>
+                </div>
+              </div>
+              <div class="sd-step" data-aos="fade-right" data-aos-delay="310">
+                <div class="sd-step-num">03</div>
+                <div class="sd-step-body">
+                  <h5>Phát Triển Bot & Automation</h5>
+                  <p>Code và cấu hình automation scripts, RPA bots và workflow rules với khả năng xử lý exception thông minh.</p>
+                </div>
+              </div>
+              <div class="sd-step" data-aos="fade-right" data-aos-delay="340">
+                <div class="sd-step-num">04</div>
+                <div class="sd-step-body">
+                  <h5>Kiểm Thử & Validation</h5>
+                  <p>Test toàn diện với dữ liệu thực, kiểm tra edge cases và đảm bảo kết quả chính xác trước khi go-live.</p>
+                </div>
+              </div>
+              <div class="sd-step" data-aos="fade-right" data-aos-delay="370">
+                <div class="sd-step-num">05</div>
+                <div class="sd-step-body">
+                  <h5>Triển Khai & Đào Tạo</h5>
+                  <p>Rollout theo giai đoạn, training người dùng, thiết lập monitoring và hỗ trợ chuyển đổi thành công.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="sd-gallery mb-4" data-aos="fade-up" data-aos-delay="250">
+              <h3><i class="bi bi-images me-2"></i>Dự Án Tiêu Biểu</h3>
+              <div class="row g-3">
+                <div class="col-md-4"><div class="sd-gallery-img"><img src="assets/img/services/services-8.webp" alt="" class="img-fluid rounded"></div></div>
+                <div class="col-md-4"><div class="sd-gallery-img"><img src="assets/img/services/services-11.webp" alt="" class="img-fluid rounded"></div></div>
+                <div class="col-md-4"><div class="sd-gallery-img"><img src="assets/img/services/services-2.webp" alt="" class="img-fluid rounded"></div></div>
+              </div>
+            </div>
+
+            <div class="sd-tags" data-aos="fade-up">
+              <span class="sd-tag">UiPath</span><span class="sd-tag">Power Automate</span><span class="sd-tag">Zapier</span>
+              <span class="sd-tag">n8n</span><span class="sd-tag">Python</span><span class="sd-tag">Make.com</span>
+              <span class="sd-tag">Workflow BPM</span><span class="sd-tag">API Integration</span>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="sd-sidebar-card">
+              <h4><i class="bi bi-grid me-2"></i>Tất Cả Dịch Vụ</h4>
+              <ul class="sd-services-list">
+                <li><a href="service-digital-solutions.html"><i class="bi bi-stack list-icon"></i><span>Giải Pháp Kỹ Thuật Số</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-secure-systems.html"><i class="bi bi-shield-check list-icon"></i><span>Hệ Thống Bảo Mật</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-growth-strategy.html"><i class="bi bi-graph-up list-icon"></i><span>Chiến Lược Tăng Trưởng</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-ai-integration.html"><i class="bi bi-cpu list-icon"></i><span>Tích Hợp AI</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-cloud.html"><i class="bi bi-cloud-arrow-up list-icon"></i><span>Dịch Vụ Cloud</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-automation.html" class="active"><i class="bi bi-gear list-icon"></i><span>Tự Động Hóa Quy Trình</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+              </ul>
+            </div>
+            <div class="sd-sidebar-card">
+              <h4><i class="bi bi-info-circle me-2"></i>Thông Tin Dịch Vụ</h4>
+              <ul class="sd-info-list">
+                <li><span class="label">Thời gian:</span><span class="val">3 – 10 tuần</span></li>
+                <li><span class="label">Tiết kiệm:</span><span class="val">-80% thủ công</span></li>
+                <li><span class="label">ROI:</span><span class="val">&gt;300%</span></li>
+                <li><span class="label">Chính xác:</span><span class="val">99.9%</span></li>
+                <li><span class="label">Hỗ trợ:</span><span class="val">Ưu tiên 24/7</span></li>
+              </ul>
+            </div>
+            <div class="sd-cta-card">
+              <h4>Tự Động Hóa Ngay?</h4>
+              <p>Hãy để chúng tôi phân tích quy trình và cho bạn thấy tiết kiệm được bao nhiêu thời gian và chi phí.</p>
+              <ul class="cta-items">
+                <li><i class="bi bi-check-circle-fill"></i>Phân tích quy trình miễn phí</li>
+                <li><i class="bi bi-check-circle-fill"></i>ROI calculator cụ thể</li>
+                <li><i class="bi bi-check-circle-fill"></i>Pilot 2 tuần không rủi ro</li>
+              </ul>
+              <a href="index.html#contact" class="btn-cta">Phân Tích Quy Trình Miễn Phí</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sd-stats-section">
+      <div class="sd-stats-bg" data-parallax="0.3"></div>
+      <div class="sd-stats-overlay"></div>
+      <div class="sd-stats-pattern"></div>
+      <div class="container sd-stats-inner">
+        <div class="row g-4 text-center">
+          <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+            <div class="sd-stat-item">
+              <div class="sd-stat-icon"><i class="bi bi-speedometer2"></i></div>
+              <div class="sd-stat-num"><sup>-</sup><span class="purecounter" data-purecounter-start="0" data-purecounter-end="80" data-purecounter-duration="2">0</span><sup>%</sup></div>
+              <div class="sd-stat-label">Giảm Thời Gian Xử Lý</div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+            <div class="sd-stat-item">
+              <div class="sd-stat-icon"><i class="bi bi-gear-wide-connected"></i></div>
+              <div class="sd-stat-num"><span class="purecounter" data-purecounter-start="0" data-purecounter-end="500" data-purecounter-duration="2">0</span><sup>+</sup></div>
+              <div class="sd-stat-label">Quy Trình Đã Tự Động Hóa</div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+            <div class="sd-stat-item">
+              <div class="sd-stat-icon"><i class="bi bi-graph-up-arrow"></i></div>
+              <div class="sd-stat-num"><span class="purecounter" data-purecounter-start="0" data-purecounter-end="300" data-purecounter-duration="2">0</span><sup>%</sup></div>
+              <div class="sd-stat-label">Return On Investment</div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+            <div class="sd-stat-item">
+              <div class="sd-stat-icon"><i class="bi bi-person-check"></i></div>
+              <div class="sd-stat-num"><span class="purecounter" data-purecounter-start="0" data-purecounter-end="95" data-purecounter-duration="2">0</span><sup>%</sup></div>
+              <div class="sd-stat-label">Nhân Viên Hài Lòng</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="sd-cta-section" data-aos="zoom-in">
+          <h3>Giải Phóng Đội Ngũ Của Bạn</h3>
+          <p>Hãy để automation xử lý công việc lặp lại — và đội ngũ của bạn có thể tập trung vào chiến lược và sáng tạo.</p>
+          <div class="cta-btns">
+            <a href="index.html#contact" class="btn-primary-cta">Liên Hệ Ngay</a>
+            <a href="index.html#portfolio" class="btn-outline-cta">Xem Portfolio</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Robot AI Mascot -->
+  <div id="robot-mascot" aria-label="AI Portfolio Guide">
+    <div class="robot-bubble" id="robot-bubble">
+      <p id="robot-message" style="margin:0;"></p>
+    </div>
+    <div class="robot-wrapper" id="robot-wrapper">
+      <img src="assets/img/profile/Picture1.gif" alt="AI Robot Mascot" class="robot-img">
+      <div class="robot-shadow"></div>
+    </div>
+  </div>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename" data-i18n="site_name">Edin Terzić</strong> <span data-i18n="footer_rights">All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-twitter-x"></i></a><a href=""><i class="bi bi-facebook"></i></a>
+        <a href=""><i class="bi bi-instagram"></i></a><a href=""><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="credits">Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | <a href="https://bootstrapmade.com/tools/">DevTools</a></div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/robot-mascot.js"></script>
+  <script>
+  (function(){
+    var els=document.querySelectorAll('[data-parallax]');
+    if(!els.length)return;
+    function u(){var s=window.pageYOffset;els.forEach(function(e){var sp=parseFloat(e.dataset.parallax)||0;e.style.transform='translateY('+(s*sp)+'px)'});}
+    window.addEventListener('scroll',u,{passive:true});u();
+  })();
+  </script>
+</body>
+</html>

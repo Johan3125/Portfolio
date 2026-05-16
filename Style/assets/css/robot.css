@@ -1,0 +1,182 @@
+/*--------------------------------------------------------------
+# Robot AI Mascot & Hero 3D Effects
+--------------------------------------------------------------*/
+
+/* ── Hero image container: 3D mouse-tilt ── */
+.hero .image-container {
+  transition: transform 0.12s ease-out;
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+
+/* Floating cards gain depth in 3D space */
+.hero .floating-card.card-1 { transform: translateZ(50px) translateX(-20px) translateY(-20px); }
+.hero .floating-card.card-2 { transform: translateZ(70px) translateX(20px) translateY(30px); }
+.hero .floating-card.card-3 { transform: translateZ(40px) translateX(-30px) translateY(40px); }
+
+/* ── Robot Mascot Container ── */
+#robot-mascot {
+  position: fixed;
+  bottom: 75px;
+  right: 18px;
+  z-index: 9990;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0;
+  cursor: grab;
+  user-select: none;
+  touch-action: none;
+}
+
+#robot-mascot:active {
+  cursor: grabbing;
+}
+
+/* ── Speech Bubble ── */
+.robot-bubble {
+  background: #ffffff;
+  color: #314862;
+  border-radius: 14px 14px 4px 14px;
+  padding: 10px 14px;
+  max-width: 210px;
+  min-width: 130px;
+  font-size: 12.5px;
+  font-family: var(--default-font, sans-serif);
+  line-height: 1.55;
+  box-shadow: 0 8px 32px rgba(6, 92, 194, 0.18), 0 2px 8px rgba(0,0,0,0.08);
+  margin-bottom: 8px;
+  opacity: 0;
+  transform: translateY(8px) scale(0.92);
+  transform-origin: bottom right;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  pointer-events: none;
+  border: 1px solid rgba(6, 92, 194, 0.1);
+}
+
+.robot-bubble.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* Small arrow pointing down-right */
+.robot-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  right: 22px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 0px solid transparent;
+  border-top: 8px solid #ffffff;
+  filter: drop-shadow(0 2px 2px rgba(6,92,194,0.12));
+}
+
+/* ── Robot Image Wrapper (3D tilt target) ── */
+.robot-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform-style: preserve-3d;
+  transition: transform 0.08s linear;
+  will-change: transform;
+}
+
+/* ── Robot GIF ── */
+.robot-img {
+  width: 78px;
+  height: auto;
+  animation: robotFloat 2.8s ease-in-out infinite;
+  filter: drop-shadow(0 8px 18px rgba(6, 92, 194, 0.35));
+  display: block;
+}
+
+/* ── Shadow under robot ── */
+.robot-shadow {
+  width: 46px;
+  height: 9px;
+  background: radial-gradient(ellipse, rgba(6, 92, 194, 0.28) 0%, transparent 72%);
+  border-radius: 50%;
+  animation: robotShadow 2.8s ease-in-out infinite;
+  margin-top: -4px;
+}
+
+/* ── Animations ── */
+@keyframes robotFloat {
+  0%, 100% { transform: translateY(0px) rotate(-1deg); }
+  50%       { transform: translateY(-13px) rotate(1deg); }
+}
+
+@keyframes robotShadow {
+  0%, 100% { transform: scaleX(1);   opacity: 0.55; }
+  50%       { transform: scaleX(0.65); opacity: 0.25; }
+}
+
+/* Pulse ring on hover */
+#robot-mascot:hover .robot-img {
+  filter: drop-shadow(0 8px 22px rgba(6, 92, 194, 0.55));
+}
+
+/* ── Dark Mode ── */
+body.dark-mode .robot-bubble {
+  background: #252838;
+  color: #dde5f6;
+  border-color: rgba(107, 158, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45), 0 2px 8px rgba(107,158,255,0.08);
+}
+
+body.dark-mode .robot-bubble::after {
+  border-top-color: #252838;
+}
+
+body.dark-mode .robot-img {
+  filter: drop-shadow(0 8px 20px rgba(107, 158, 255, 0.5));
+}
+
+body.dark-mode .robot-shadow {
+  background: radial-gradient(ellipse, rgba(107, 158, 255, 0.25) 0%, transparent 72%);
+}
+
+/* ── Mobile ── */
+@media (max-width: 576px) {
+  #robot-mascot { bottom: 65px; right: 10px; }
+  .robot-img { width: 60px; }
+  .robot-bubble { max-width: 175px; font-size: 12px; }
+}
+
+/* ── Notification dot ── */
+.robot-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 9px;
+  height: 9px;
+  background: #3ec971;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  animation: pulseDot 2s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes pulseDot {
+  0%, 100% { transform: scale(1);   opacity: 1; }
+  50%       { transform: scale(1.3); opacity: 0.7; }
+}
+
+/* ── 3D Glow ring around robot on hover ── */
+#robot-mascot:hover .robot-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px solid rgba(107, 158, 255, 0.4);
+  animation: glowRing 1.2s ease-in-out infinite;
+}
+
+@keyframes glowRing {
+  0%, 100% { transform: scale(1);   opacity: 0.6; }
+  50%       { transform: scale(1.12); opacity: 0.2; }
+}
