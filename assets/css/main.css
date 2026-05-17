@@ -582,9 +582,23 @@ section,
   }
 }
 
+@media (max-width: 400px) {
+  .hero .hero-title {
+    font-size: 1.7rem;
+    line-height: 1.25;
+  }
+}
+
+@media (max-width: 340px) {
+  .hero .hero-title {
+    font-size: 1.45rem;
+  }
+}
+
 .hero .hero-title .typed {
   color: var(--accent-color);
   position: relative;
+  display: inline-block;
 }
 
 .hero .lead {
