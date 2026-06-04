@@ -31,7 +31,7 @@
     .lang-toggle-btn:hover,.theme-toggle-btn:hover{background:rgba(6,92,194,.2);transform:scale(1.07)}
     body.dark-mode .lang-toggle-btn,body.dark-mode .theme-toggle-btn{background:rgba(107,158,255,.12);color:#8fb5ff;border-color:rgba(107,158,255,.3)}
     body.dark-mode .lang-toggle-btn:hover,body.dark-mode .theme-toggle-btn:hover{background:rgba(107,158,255,.22)}
-    @media(max-width:576px){.fixed-toggle-buttons{right:58px;gap:5px;height:60px}.lang-toggle-btn{padding:4px 10px;font-size:11px}.theme-toggle-btn{padding:4px 8px;font-size:12px}}
+    @media(max-width:576px){.fixed-toggle-buttons{right:58px;gap:5px}.lang-toggle-btn{padding:4px 10px;font-size:11px}.theme-toggle-btn{padding:4px 8px;font-size:12px}}
     .sd-feature-card::before { background: linear-gradient(90deg, #0369a1, #075985); }
     .sd-step-num { background: linear-gradient(135deg, #0369a1, #075985); }
     /* Cloud floating bubbles effect */
@@ -115,24 +115,24 @@
       <div class="container">
         <div class="sd-hero-inner" data-aos="fade-up" data-aos-delay="100">
           <div class="sd-breadcrumb">
-            <a href="index.html">Trang chủ</a>
+            <a href="index.html" data-i18n="nav_home">Trang chủ</a>
             <i class="bi bi-chevron-right"></i>
-            <a href="index.html#services">Dịch vụ</a>
+            <a href="index.html#services" data-i18n="nav_services">Dịch vụ</a>
             <i class="bi bi-chevron-right"></i>
-            <span>Dịch Vụ Cloud</span>
+            <span data-i18n="services_5_title">Dịch Vụ Cloud</span>
           </div>
           <div class="sd-hero-icon-wrap" data-aos="zoom-in" data-aos-delay="200">
             <i class="bi bi-cloud-arrow-up"></i>
           </div>
-          <h1 data-aos="fade-up" data-aos-delay="250">Dịch Vụ Cloud</h1>
-          <p class="sd-lead" data-aos="fade-up" data-aos-delay="300">Kiến trúc cloud scalable và giải pháp migration toàn diện cho ứng dụng hiện đại. Tối ưu chi phí, tăng tính linh hoạt và đảm bảo uptime 99.99% cho hệ thống của bạn.</p>
+          <h1 data-aos="fade-up" data-aos-delay="250" data-i18n="services_5_title">Dịch Vụ Cloud</h1>
+          <p class="sd-lead" data-aos="fade-up" data-aos-delay="300" data-i18n="svc_5_hero_sub">Kiến trúc cloud scalable và giải pháp migration toàn diện cho ứng dụng hiện đại. Tối ưu chi phí, tăng tính linh hoạt và đảm bảo uptime 99.99% cho hệ thống của bạn.</p>
           <div class="sd-hero-actions" data-aos="fade-up" data-aos-delay="350">
-            <a href="index.html#contact" class="btn-light">Liên Hệ Ngay</a>
-            <a href="index.html#services" class="btn-outline-light">Xem Tất Cả Dịch Vụ</a>
+            <a href="index.html#contact" class="btn-light" data-i18n="svc_btn_contact">Liên Hệ Ngay</a>
+            <a href="index.html#services" class="btn-outline-light" data-i18n="svc_btn_all_services">Xem Tất Cả Dịch Vụ</a>
           </div>
         </div>
       </div>
-      <div class="sd-scroll-hint"><span>Khám phá</span><i class="bi bi-chevron-down"></i></div>
+      <div class="sd-scroll-hint"><span data-i18n="svc_scroll_hint">Khám phá</span><i class="bi bi-chevron-down"></i></div>
     </section>
 
     <section class="service-details section">
@@ -141,79 +141,79 @@
           <div class="col-lg-8">
             <div class="sd-overview" data-aos="fade-up" data-aos-delay="100">
               <i class="bi bi-cloud-arrow-up sd-overview-icon"></i>
-              <h2>Cloud Infrastructure Cho Kỷ Nguyên Số</h2>
-              <p>Chúng tôi thiết kế và triển khai kiến trúc cloud hiệu quả trên AWS, Azure và Google Cloud. Từ migration hệ thống legacy đến xây dựng ứng dụng cloud-native, chúng tôi đảm bảo hệ thống của bạn luôn hoạt động với hiệu suất tối ưu và chi phí hợp lý nhất.</p>
+              <h2 data-i18n="svc5_ov_t">Cloud Infrastructure Cho Kỷ Nguyên Số</h2>
+              <p data-i18n="svc5_ov_d">Chúng tôi thiết kế và triển khai kiến trúc cloud hiệu quả trên AWS, Azure và Google Cloud. Từ migration hệ thống legacy đến xây dựng ứng dụng cloud-native, chúng tôi đảm bảo hệ thống của bạn luôn hoạt động với hiệu suất tối ưu và chi phí hợp lý nhất.</p>
             </div>
 
             <div class="sd-features-grid" data-aos="fade-up" data-aos-delay="150">
-              <h3><i class="bi bi-lightning-charge me-2"></i>Tính Năng Nổi Bật</h3>
+              <h3><i class="bi bi-lightning-charge me-2"></i><span data-i18n="svc_sh_feat">Tính Năng Nổi Bật</span></h3>
               <div class="row g-3">
                 <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
                   <div class="sd-feature-card">
                     <div class="sd-feature-icon"><i class="bi bi-cloud-upload"></i></div>
-                    <h5>Cloud Migration</h5>
-                    <p>Di chuyển hệ thống legacy lên cloud an toàn, không gián đoạn với chiến lược 6R phù hợp từng ứng dụng.</p>
+                    <h5 data-i18n="svc5_f1_t">Cloud Migration</h5>
+                    <p data-i18n="svc5_f1_d">Di chuyển hệ thống legacy lên cloud an toàn, không gián đoạn với chiến lược 6R phù hợp từng ứng dụng.</p>
                   </div>
                 </div>
                 <div class="col-md-6" data-aos="zoom-in" data-aos-delay="250">
                   <div class="sd-feature-card">
                     <div class="sd-feature-icon"><i class="bi bi-boxes"></i></div>
-                    <h5>Microservices & K8s</h5>
-                    <p>Kiến trúc microservices với Kubernetes orchestration, tự động scale theo tải và zero-downtime deployment.</p>
+                    <h5 data-i18n="svc5_f2_t">Microservices & K8s</h5>
+                    <p data-i18n="svc5_f2_d">Kiến trúc microservices với Kubernetes orchestration, tự động scale theo tải và zero-downtime deployment.</p>
                   </div>
                 </div>
                 <div class="col-md-6" data-aos="zoom-in" data-aos-delay="300">
                   <div class="sd-feature-card">
                     <div class="sd-feature-icon"><i class="bi bi-infinity"></i></div>
-                    <h5>DevOps & CI/CD</h5>
-                    <p>Pipeline tự động hóa từ code đến production, rút ngắn time-to-market và tăng chất lượng phần mềm.</p>
+                    <h5 data-i18n="svc5_f3_t">DevOps & CI/CD</h5>
+                    <p data-i18n="svc5_f3_d">Pipeline tự động hóa từ code đến production, rút ngắn time-to-market và tăng chất lượng phần mềm.</p>
                   </div>
                 </div>
                 <div class="col-md-6" data-aos="zoom-in" data-aos-delay="350">
                   <div class="sd-feature-card">
                     <div class="sd-feature-icon"><i class="bi bi-graph-down-arrow"></i></div>
-                    <h5>Tối Ưu Chi Phí</h5>
-                    <p>FinOps practices, right-sizing và reserved instances giúp giảm 30-50% chi phí cloud hàng tháng.</p>
+                    <h5 data-i18n="svc5_f4_t">Tối Ưu Chi Phí</h5>
+                    <p data-i18n="svc5_f4_d">FinOps practices, right-sizing và reserved instances giúp giảm 30-50% chi phí cloud hàng tháng.</p>
                   </div>
                 </div>
               </div>
             </div>
 
             <div class="sd-process" data-aos="fade-up" data-aos-delay="200">
-              <h3><i class="bi bi-diagram-3 me-2"></i>Quy Trình Cloud Migration</h3>
+              <h3><i class="bi bi-diagram-3 me-2"></i><span data-i18n="svc5_ph">Quy Trình Cloud Migration</span></h3>
               <div class="sd-step" data-aos="fade-right" data-aos-delay="250">
                 <div class="sd-step-num">01</div>
                 <div class="sd-step-body">
-                  <h5>Đánh Giá Hệ Thống Hiện Tại</h5>
-                  <p>Inventory ứng dụng, đánh giá dependencies, phân tích chi phí và xác định chiến lược migration phù hợp nhất.</p>
+                  <h5 data-i18n="svc5_s1_t">Đánh Giá Hệ Thống Hiện Tại</h5>
+                  <p data-i18n="svc5_s1_d">Inventory ứng dụng, đánh giá dependencies, phân tích chi phí và xác định chiến lược migration phù hợp nhất.</p>
                 </div>
               </div>
               <div class="sd-step" data-aos="fade-right" data-aos-delay="280">
                 <div class="sd-step-num">02</div>
                 <div class="sd-step-body">
-                  <h5>Thiết Kế Kiến Trúc Cloud</h5>
-                  <p>Thiết kế Well-Architected framework: reliability, security, performance, cost optimization và sustainability.</p>
+                  <h5 data-i18n="svc5_s2_t">Thiết Kế Kiến Trúc Cloud</h5>
+                  <p data-i18n="svc5_s2_d">Thiết kế Well-Architected framework: reliability, security, performance, cost optimization và sustainability.</p>
                 </div>
               </div>
               <div class="sd-step" data-aos="fade-right" data-aos-delay="310">
                 <div class="sd-step-num">03</div>
                 <div class="sd-step-body">
-                  <h5>Migration & Containerization</h5>
-                  <p>Containerize ứng dụng, migrate dữ liệu, thiết lập networking và security theo từng wave có kiểm soát.</p>
+                  <h5 data-i18n="svc5_s3_t">Migration & Containerization</h5>
+                  <p data-i18n="svc5_s3_d">Containerize ứng dụng, migrate dữ liệu, thiết lập networking và security theo từng wave có kiểm soát.</p>
                 </div>
               </div>
               <div class="sd-step" data-aos="fade-right" data-aos-delay="340">
                 <div class="sd-step-num">04</div>
                 <div class="sd-step-body">
-                  <h5>Tối Ưu & Kiểm Thử</h5>
-                  <p>Performance tuning, load testing, bảo mật cloud và kiểm tra DR/failover để đảm bảo SLA cam kết.</p>
+                  <h5 data-i18n="svc5_s4_t">Tối Ưu & Kiểm Thử</h5>
+                  <p data-i18n="svc5_s4_d">Performance tuning, load testing, bảo mật cloud và kiểm tra DR/failover để đảm bảo SLA cam kết.</p>
                 </div>
               </div>
               <div class="sd-step" data-aos="fade-right" data-aos-delay="370">
                 <div class="sd-step-num">05</div>
                 <div class="sd-step-body">
-                  <h5>Hỗ Trợ & Quản Lý</h5>
-                  <p>Managed cloud services, monitoring 24/7, incident response và báo cáo chi phí hàng tháng.</p>
+                  <h5 data-i18n="svc5_s5_t">Hỗ Trợ & Quản Lý</h5>
+                  <p data-i18n="svc5_s5_d">Managed cloud services, monitoring 24/7, incident response và báo cáo chi phí hàng tháng.</p>
                 </div>
               </div>
             </div>
@@ -234,35 +234,35 @@
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
             <div class="sd-sidebar-card">
-              <h4><i class="bi bi-grid me-2"></i>Tất Cả Dịch Vụ</h4>
+              <h4><i class="bi bi-grid me-2"></i><span data-i18n="svc_sh_all">Tất Cả Dịch Vụ</span></h4>
               <ul class="sd-services-list">
-                <li><a href="service-digital-solutions.html"><i class="bi bi-stack list-icon"></i><span>Giải Pháp Kỹ Thuật Số</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
-                <li><a href="service-secure-systems.html"><i class="bi bi-shield-check list-icon"></i><span>Hệ Thống Bảo Mật</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
-                <li><a href="service-growth-strategy.html"><i class="bi bi-graph-up list-icon"></i><span>Chiến Lược Tăng Trưởng</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
-                <li><a href="service-ai-integration.html"><i class="bi bi-cpu list-icon"></i><span>Tích Hợp AI</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
-                <li><a href="service-cloud.html" class="active"><i class="bi bi-cloud-arrow-up list-icon"></i><span>Dịch Vụ Cloud</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
-                <li><a href="service-automation.html"><i class="bi bi-gear list-icon"></i><span>Tự Động Hóa Quy Trình</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-digital-solutions.html"><i class="bi bi-stack list-icon"></i><span data-i18n="services_1_title">Giải Pháp Kỹ Thuật Số</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-secure-systems.html"><i class="bi bi-shield-check list-icon"></i><span data-i18n="services_2_title">Hệ Thống Bảo Mật</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-growth-strategy.html"><i class="bi bi-graph-up list-icon"></i><span data-i18n="services_3_title">Chiến Lược Tăng Trưởng</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-ai-integration.html"><i class="bi bi-cpu list-icon"></i><span data-i18n="services_4_title">Tích Hợp AI</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-cloud.html" class="active"><i class="bi bi-cloud-arrow-up list-icon"></i><span data-i18n="services_5_title">Dịch Vụ Cloud</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-automation.html"><i class="bi bi-gear list-icon"></i><span data-i18n="services_6_title">Tự Động Hóa Quy Trình</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
               </ul>
             </div>
             <div class="sd-sidebar-card">
-              <h4><i class="bi bi-info-circle me-2"></i>Thông Tin Dịch Vụ</h4>
+              <h4><i class="bi bi-info-circle me-2"></i><span data-i18n="svc_sh_info">Thông Tin Dịch Vụ</span></h4>
               <ul class="sd-info-list">
-                <li><span class="label">Nền tảng:</span><span class="val">AWS / Azure / GCP</span></li>
-                <li><span class="label">Uptime SLA:</span><span class="val">99.99%</span></li>
-                <li><span class="label">Thời gian:</span><span class="val">4 – 12 tuần</span></li>
-                <li><span class="label">Giảm chi phí:</span><span class="val">30 – 50%</span></li>
-                <li><span class="label">Hỗ trợ:</span><span class="val">24/7 on-call</span></li>
+                <li><span class="label" data-i18n="svc5_il1">Nền tảng:</span><span class="val" data-i18n="svc5_iv1">AWS / Azure / GCP</span></li>
+                <li><span class="label" data-i18n="svc5_il2">Uptime SLA:</span><span class="val" data-i18n="svc5_iv2">99.99%</span></li>
+                <li><span class="label" data-i18n="svc5_il3">Thời gian:</span><span class="val" data-i18n="svc5_iv3">4 – 12 tuần</span></li>
+                <li><span class="label" data-i18n="svc5_il4">Giảm chi phí:</span><span class="val" data-i18n="svc5_iv4">30 – 50%</span></li>
+                <li><span class="label" data-i18n="svc5_il5">Hỗ trợ:</span><span class="val" data-i18n="svc5_iv5">24/7 on-call</span></li>
               </ul>
             </div>
             <div class="sd-cta-card">
-              <h4>Chuyển Lên Cloud Ngay?</h4>
-              <p>Bắt đầu hành trình cloud transformation với đội ngũ chuyên gia có chứng chỉ AWS/Azure/GCP.</p>
+              <h4 data-i18n="svc5_ct_t">Chuyển Lên Cloud Ngay?</h4>
+              <p data-i18n="svc5_ct_d">Bắt đầu hành trình cloud transformation với đội ngũ chuyên gia có chứng chỉ AWS/Azure/GCP.</p>
               <ul class="cta-items">
-                <li><i class="bi bi-check-circle-fill"></i>Đánh giá cloud miễn phí</li>
-                <li><i class="bi bi-check-circle-fill"></i>ROI rõ ràng trước khi bắt đầu</li>
-                <li><i class="bi bi-check-circle-fill"></i>Zero-downtime migration</li>
+                <li><i class="bi bi-check-circle-fill"></i><span data-i18n="svc5_ct_l1">Đánh giá cloud miễn phí</span></li>
+                <li><i class="bi bi-check-circle-fill"></i><span data-i18n="svc5_ct_l2">ROI rõ ràng trước khi bắt đầu</span></li>
+                <li><i class="bi bi-check-circle-fill"></i><span data-i18n="svc5_ct_l3">Zero-downtime migration</span></li>
               </ul>
-              <a href="index.html#contact" class="btn-cta">Nhận Đánh Giá Cloud Miễn Phí</a>
+              <a href="index.html#contact" class="btn-cta" data-i18n="svc_5_cta">Nhận Đánh Giá Cloud Miễn Phí</a>
             </div>
           </div>
         </div>
@@ -279,28 +279,28 @@
             <div class="sd-stat-item">
               <div class="sd-stat-icon"><i class="bi bi-cloud-check"></i></div>
               <div class="sd-stat-num"><span class="purecounter" data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="2">0</span><sup>+</sup></div>
-              <div class="sd-stat-label">Ứng Dụng Đã Deploy</div>
+              <div class="sd-stat-label" data-i18n="svc5_st1">Ứng Dụng Đã Deploy</div>
             </div>
           </div>
           <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
             <div class="sd-stat-item">
               <div class="sd-stat-icon"><i class="bi bi-clock"></i></div>
               <div class="sd-stat-num">99.99<sup>%</sup></div>
-              <div class="sd-stat-label">Uptime Đảm Bảo</div>
+              <div class="sd-stat-label" data-i18n="svc5_st2">Uptime Đảm Bảo</div>
             </div>
           </div>
           <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
             <div class="sd-stat-item">
               <div class="sd-stat-icon"><i class="bi bi-piggy-bank"></i></div>
               <div class="sd-stat-num"><sup>-</sup><span class="purecounter" data-purecounter-start="0" data-purecounter-end="40" data-purecounter-duration="2">0</span><sup>%</sup></div>
-              <div class="sd-stat-label">Tiết Kiệm Chi Phí</div>
+              <div class="sd-stat-label" data-i18n="svc5_st3">Tiết Kiệm Chi Phí</div>
             </div>
           </div>
           <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
             <div class="sd-stat-item">
               <div class="sd-stat-icon"><i class="bi bi-lightning-charge"></i></div>
               <div class="sd-stat-num"><span class="purecounter" data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="2">0</span><sup>x</sup></div>
-              <div class="sd-stat-label">Tăng Tốc Độ Deploy</div>
+              <div class="sd-stat-label" data-i18n="svc5_st4">Tăng Tốc Độ Deploy</div>
             </div>
           </div>
         </div>
@@ -310,11 +310,11 @@
     <section class="section">
       <div class="container">
         <div class="sd-cta-section" data-aos="zoom-in">
-          <h3>Cloud — Nền Tảng Của Doanh Nghiệp Hiện Đại</h3>
-          <p>Hãy bắt đầu hành trình cloud transformation để giải phóng tiềm năng và tăng tốc phát triển doanh nghiệp của bạn.</p>
+          <h3 data-i18n="svc5_ban_t">Cloud — Nền Tảng Của Doanh Nghiệp Hiện Đại</h3>
+          <p data-i18n="svc5_ban_d">Hãy bắt đầu hành trình cloud transformation để giải phóng tiềm năng và tăng tốc phát triển doanh nghiệp của bạn.</p>
           <div class="cta-btns">
-            <a href="index.html#contact" class="btn-primary-cta">Liên Hệ Ngay</a>
-            <a href="index.html#portfolio" class="btn-outline-cta">Xem Portfolio</a>
+            <a href="index.html#contact" class="btn-primary-cta" data-i18n="svc_btn_contact">Liên Hệ Ngay</a>
+            <a href="index.html#portfolio" class="btn-outline-cta" data-i18n="svc_sh_port">Xem Portfolio</a>
           </div>
         </div>
       </div>

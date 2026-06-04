@@ -493,7 +493,7 @@ section,
   font-size: 36px;
   font-weight: 700;
   padding: 0;
-  line-height: 1px;
+  line-height: 1.2;
   margin: 0;
   letter-spacing: 0.5px;
   position: relative;
@@ -1990,6 +1990,21 @@ section,
 @media (max-width: 991px) {
   .portfolio .entry-overlay {
     padding: 20px;
+  }
+}
+
+/* Touch devices: always show overlay so links are accessible without hover */
+@media (hover: none) {
+  .portfolio .portfolio-entry .entry-image .entry-overlay {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .portfolio .portfolio-entry .entry-image .entry-overlay .overlay-content {
+    transform: translateY(0);
+  }
+  .portfolio .portfolio-entry .entry-image .entry-overlay .entry-links a {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

@@ -31,7 +31,7 @@
     .lang-toggle-btn:hover,.theme-toggle-btn:hover{background:rgba(6,92,194,.2);transform:scale(1.07)}
     body.dark-mode .lang-toggle-btn,body.dark-mode .theme-toggle-btn{background:rgba(107,158,255,.12);color:#8fb5ff;border-color:rgba(107,158,255,.3)}
     body.dark-mode .lang-toggle-btn:hover,body.dark-mode .theme-toggle-btn:hover{background:rgba(107,158,255,.22)}
-    @media(max-width:576px){.fixed-toggle-buttons{right:58px;gap:5px;height:60px}.lang-toggle-btn{padding:4px 10px;font-size:11px}.theme-toggle-btn{padding:4px 8px;font-size:12px}}
+    @media(max-width:576px){.fixed-toggle-buttons{right:58px;gap:5px}.lang-toggle-btn{padding:4px 10px;font-size:11px}.theme-toggle-btn{padding:4px 8px;font-size:12px}}
     .sd-feature-card::before { background: linear-gradient(90deg, #b45309, #92400e); }
     .sd-step-num { background: linear-gradient(135deg, #b45309, #92400e); }
     /* Spinning gear effects in hero */
@@ -112,24 +112,24 @@
       <div class="container">
         <div class="sd-hero-inner" data-aos="fade-up" data-aos-delay="100">
           <div class="sd-breadcrumb">
-            <a href="index.html">Trang chủ</a>
+            <a href="index.html" data-i18n="nav_home">Trang chủ</a>
             <i class="bi bi-chevron-right"></i>
-            <a href="index.html#services">Dịch vụ</a>
+            <a href="index.html#services" data-i18n="nav_services">Dịch vụ</a>
             <i class="bi bi-chevron-right"></i>
-            <span>Tự Động Hóa Quy Trình</span>
+            <span data-i18n="services_6_title">Tự Động Hóa Quy Trình</span>
           </div>
           <div class="sd-hero-icon-wrap" data-aos="zoom-in" data-aos-delay="200">
             <i class="bi bi-gear"></i>
           </div>
-          <h1 data-aos="fade-up" data-aos-delay="250">Tự Động Hóa Quy Trình</h1>
-          <p class="sd-lead" data-aos="fade-up" data-aos-delay="300">Tối ưu hóa quy trình kinh doanh thông qua tự động hóa thông minh. Giảm tác vụ thủ công, tăng năng suất và cho phép đội ngũ của bạn tập trung vào những việc thực sự tạo ra giá trị.</p>
+          <h1 data-aos="fade-up" data-aos-delay="250" data-i18n="services_6_title">Tự Động Hóa Quy Trình</h1>
+          <p class="sd-lead" data-aos="fade-up" data-aos-delay="300" data-i18n="svc_6_hero_sub">Tối ưu hóa quy trình kinh doanh thông qua tự động hóa thông minh. Giảm tác vụ thủ công, tăng năng suất và cho phép đội ngũ của bạn tập trung vào những việc thực sự tạo ra giá trị.</p>
           <div class="sd-hero-actions" data-aos="fade-up" data-aos-delay="350">
-            <a href="index.html#contact" class="btn-light">Liên Hệ Ngay</a>
-            <a href="index.html#services" class="btn-outline-light">Xem Tất Cả Dịch Vụ</a>
+            <a href="index.html#contact" class="btn-light" data-i18n="svc_btn_contact">Liên Hệ Ngay</a>
+            <a href="index.html#services" class="btn-outline-light" data-i18n="svc_btn_all_services">Xem Tất Cả Dịch Vụ</a>
           </div>
         </div>
       </div>
-      <div class="sd-scroll-hint"><span>Khám phá</span><i class="bi bi-chevron-down"></i></div>
+      <div class="sd-scroll-hint"><span data-i18n="svc_scroll_hint">Khám phá</span><i class="bi bi-chevron-down"></i></div>
     </section>
 
     <section class="service-details section">
@@ -138,79 +138,79 @@
           <div class="col-lg-8">
             <div class="sd-overview" data-aos="fade-up" data-aos-delay="100">
               <i class="bi bi-gear sd-overview-icon"></i>
-              <h2>Tự Động Hóa Thông Minh Cho Doanh Nghiệp</h2>
-              <p>Chúng tôi phân tích, tái thiết kế và tự động hóa các quy trình kinh doanh lặp đi lặp lại của bạn. Từ RPA (Robotic Process Automation) đến workflow automation phức tạp, chúng tôi giúp bạn vận hành nhanh hơn, chính xác hơn và tiết kiệm chi phí đáng kể.</p>
+              <h2 data-i18n="svc6_ov_t">Tự Động Hóa Thông Minh Cho Doanh Nghiệp</h2>
+              <p data-i18n="svc6_ov_d">Chúng tôi phân tích, tái thiết kế và tự động hóa các quy trình kinh doanh lặp đi lặp lại của bạn. Từ RPA (Robotic Process Automation) đến workflow automation phức tạp, chúng tôi giúp bạn vận hành nhanh hơn, chính xác hơn và tiết kiệm chi phí đáng kể.</p>
             </div>
 
             <div class="sd-features-grid" data-aos="fade-up" data-aos-delay="150">
-              <h3><i class="bi bi-lightning-charge me-2"></i>Tính Năng Nổi Bật</h3>
+              <h3><i class="bi bi-lightning-charge me-2"></i><span data-i18n="svc_sh_feat">Tính Năng Nổi Bật</span></h3>
               <div class="row g-3">
                 <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
                   <div class="sd-feature-card">
                     <div class="sd-feature-icon"><i class="bi bi-robot"></i></div>
-                    <h5>RPA — Robot Process Automation</h5>
-                    <p>Bot tự động xử lý các tác vụ lặp lại như nhập liệu, xử lý hóa đơn, reconciliation nhanh và chính xác hơn con người.</p>
+                    <h5 data-i18n="svc6_f1_t">RPA — Robot Process Automation</h5>
+                    <p data-i18n="svc6_f1_d">Bot tự động xử lý các tác vụ lặp lại như nhập liệu, xử lý hóa đơn, reconciliation nhanh và chính xác hơn con người.</p>
                   </div>
                 </div>
                 <div class="col-md-6" data-aos="zoom-in" data-aos-delay="250">
                   <div class="sd-feature-card">
                     <div class="sd-feature-icon"><i class="bi bi-diagram-2"></i></div>
-                    <h5>Workflow Engine</h5>
-                    <p>Thiết kế và tự động hóa workflow phê duyệt, routing, escalation với visibility đầy đủ và audit trail.</p>
+                    <h5 data-i18n="svc6_f2_t">Workflow Engine</h5>
+                    <p data-i18n="svc6_f2_d">Thiết kế và tự động hóa workflow phê duyệt, routing, escalation với visibility đầy đủ và audit trail.</p>
                   </div>
                 </div>
                 <div class="col-md-6" data-aos="zoom-in" data-aos-delay="300">
                   <div class="sd-feature-card">
                     <div class="sd-feature-icon"><i class="bi bi-plug"></i></div>
-                    <h5>Tích Hợp Hệ Thống</h5>
-                    <p>Kết nối CRM, ERP, HRM và các hệ thống khác để dữ liệu chảy tự động, loại bỏ việc nhập liệu thủ công.</p>
+                    <h5 data-i18n="svc6_f3_t">Tích Hợp Hệ Thống</h5>
+                    <p data-i18n="svc6_f3_d">Kết nối CRM, ERP, HRM và các hệ thống khác để dữ liệu chảy tự động, loại bỏ việc nhập liệu thủ công.</p>
                   </div>
                 </div>
                 <div class="col-md-6" data-aos="zoom-in" data-aos-delay="350">
                   <div class="sd-feature-card">
                     <div class="sd-feature-icon"><i class="bi bi-file-earmark-bar-graph"></i></div>
-                    <h5>Báo Cáo Tự Động</h5>
-                    <p>Dashboard real-time và báo cáo tự động gửi đúng người đúng lúc, không cần can thiệp thủ công.</p>
+                    <h5 data-i18n="svc6_f4_t">Báo Cáo Tự Động</h5>
+                    <p data-i18n="svc6_f4_d">Dashboard real-time và báo cáo tự động gửi đúng người đúng lúc, không cần can thiệp thủ công.</p>
                   </div>
                 </div>
               </div>
             </div>
 
             <div class="sd-process" data-aos="fade-up" data-aos-delay="200">
-              <h3><i class="bi bi-diagram-3 me-2"></i>Quy Trình Triển Khai</h3>
+              <h3><i class="bi bi-diagram-3 me-2"></i><span data-i18n="svc6_ph">Quy Trình Triển Khai</span></h3>
               <div class="sd-step" data-aos="fade-right" data-aos-delay="250">
                 <div class="sd-step-num">01</div>
                 <div class="sd-step-body">
-                  <h5>Process Discovery & Mapping</h5>
-                  <p>Khảo sát và lập bản đồ toàn bộ quy trình hiện tại, xác định điểm nghẽn, tác vụ lặp lại và cơ hội tự động hóa.</p>
+                  <h5 data-i18n="svc6_s1_t">Process Discovery & Mapping</h5>
+                  <p data-i18n="svc6_s1_d">Khảo sát và lập bản đồ toàn bộ quy trình hiện tại, xác định điểm nghẽn, tác vụ lặp lại và cơ hội tự động hóa.</p>
                 </div>
               </div>
               <div class="sd-step" data-aos="fade-right" data-aos-delay="280">
                 <div class="sd-step-num">02</div>
                 <div class="sd-step-body">
-                  <h5>Thiết Kế Workflow Mới</h5>
-                  <p>Tái thiết kế quy trình tối ưu với automation logic, định nghĩa trigger, conditions và exception handling.</p>
+                  <h5 data-i18n="svc6_s2_t">Thiết Kế Workflow Mới</h5>
+                  <p data-i18n="svc6_s2_d">Tái thiết kế quy trình tối ưu với automation logic, định nghĩa trigger, conditions và exception handling.</p>
                 </div>
               </div>
               <div class="sd-step" data-aos="fade-right" data-aos-delay="310">
                 <div class="sd-step-num">03</div>
                 <div class="sd-step-body">
-                  <h5>Phát Triển Bot & Automation</h5>
-                  <p>Code và cấu hình automation scripts, RPA bots và workflow rules với khả năng xử lý exception thông minh.</p>
+                  <h5 data-i18n="svc6_s3_t">Phát Triển Bot & Automation</h5>
+                  <p data-i18n="svc6_s3_d">Code và cấu hình automation scripts, RPA bots và workflow rules với khả năng xử lý exception thông minh.</p>
                 </div>
               </div>
               <div class="sd-step" data-aos="fade-right" data-aos-delay="340">
                 <div class="sd-step-num">04</div>
                 <div class="sd-step-body">
-                  <h5>Kiểm Thử & Validation</h5>
-                  <p>Test toàn diện với dữ liệu thực, kiểm tra edge cases và đảm bảo kết quả chính xác trước khi go-live.</p>
+                  <h5 data-i18n="svc6_s4_t">Kiểm Thử & Validation</h5>
+                  <p data-i18n="svc6_s4_d">Test toàn diện với dữ liệu thực, kiểm tra edge cases và đảm bảo kết quả chính xác trước khi go-live.</p>
                 </div>
               </div>
               <div class="sd-step" data-aos="fade-right" data-aos-delay="370">
                 <div class="sd-step-num">05</div>
                 <div class="sd-step-body">
-                  <h5>Triển Khai & Đào Tạo</h5>
-                  <p>Rollout theo giai đoạn, training người dùng, thiết lập monitoring và hỗ trợ chuyển đổi thành công.</p>
+                  <h5 data-i18n="svc6_s5_t">Triển Khai & Đào Tạo</h5>
+                  <p data-i18n="svc6_s5_d">Rollout theo giai đoạn, training người dùng, thiết lập monitoring và hỗ trợ chuyển đổi thành công.</p>
                 </div>
               </div>
             </div>
@@ -232,35 +232,35 @@
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
             <div class="sd-sidebar-card">
-              <h4><i class="bi bi-grid me-2"></i>Tất Cả Dịch Vụ</h4>
+              <h4><i class="bi bi-grid me-2"></i><span data-i18n="svc_sh_all">Tất Cả Dịch Vụ</span></h4>
               <ul class="sd-services-list">
-                <li><a href="service-digital-solutions.html"><i class="bi bi-stack list-icon"></i><span>Giải Pháp Kỹ Thuật Số</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
-                <li><a href="service-secure-systems.html"><i class="bi bi-shield-check list-icon"></i><span>Hệ Thống Bảo Mật</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
-                <li><a href="service-growth-strategy.html"><i class="bi bi-graph-up list-icon"></i><span>Chiến Lược Tăng Trưởng</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
-                <li><a href="service-ai-integration.html"><i class="bi bi-cpu list-icon"></i><span>Tích Hợp AI</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
-                <li><a href="service-cloud.html"><i class="bi bi-cloud-arrow-up list-icon"></i><span>Dịch Vụ Cloud</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
-                <li><a href="service-automation.html" class="active"><i class="bi bi-gear list-icon"></i><span>Tự Động Hóa Quy Trình</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-digital-solutions.html"><i class="bi bi-stack list-icon"></i><span data-i18n="services_1_title">Giải Pháp Kỹ Thuật Số</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-secure-systems.html"><i class="bi bi-shield-check list-icon"></i><span data-i18n="services_2_title">Hệ Thống Bảo Mật</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-growth-strategy.html"><i class="bi bi-graph-up list-icon"></i><span data-i18n="services_3_title">Chiến Lược Tăng Trưởng</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-ai-integration.html"><i class="bi bi-cpu list-icon"></i><span data-i18n="services_4_title">Tích Hợp AI</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-cloud.html"><i class="bi bi-cloud-arrow-up list-icon"></i><span data-i18n="services_5_title">Dịch Vụ Cloud</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-automation.html" class="active"><i class="bi bi-gear list-icon"></i><span data-i18n="services_6_title">Tự Động Hóa Quy Trình</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
               </ul>
             </div>
             <div class="sd-sidebar-card">
-              <h4><i class="bi bi-info-circle me-2"></i>Thông Tin Dịch Vụ</h4>
+              <h4><i class="bi bi-info-circle me-2"></i><span data-i18n="svc_sh_info">Thông Tin Dịch Vụ</span></h4>
               <ul class="sd-info-list">
-                <li><span class="label">Thời gian:</span><span class="val">3 – 10 tuần</span></li>
-                <li><span class="label">Tiết kiệm:</span><span class="val">-80% thủ công</span></li>
-                <li><span class="label">ROI:</span><span class="val">&gt;300%</span></li>
-                <li><span class="label">Chính xác:</span><span class="val">99.9%</span></li>
-                <li><span class="label">Hỗ trợ:</span><span class="val">Ưu tiên 24/7</span></li>
+                <li><span class="label" data-i18n="svc6_il1">Thời gian:</span><span class="val" data-i18n="svc6_iv1">3 – 10 tuần</span></li>
+                <li><span class="label" data-i18n="svc6_il2">Tiết kiệm:</span><span class="val" data-i18n="svc6_iv2">-80% thủ công</span></li>
+                <li><span class="label" data-i18n="svc6_il3">ROI:</span><span class="val" data-i18n="svc6_iv3">&gt;300%</span></li>
+                <li><span class="label" data-i18n="svc6_il4">Chính xác:</span><span class="val" data-i18n="svc6_iv4">99.9%</span></li>
+                <li><span class="label" data-i18n="svc6_il5">Hỗ trợ:</span><span class="val" data-i18n="svc6_iv5">Ưu tiên 24/7</span></li>
               </ul>
             </div>
             <div class="sd-cta-card">
-              <h4>Tự Động Hóa Ngay?</h4>
-              <p>Hãy để chúng tôi phân tích quy trình và cho bạn thấy tiết kiệm được bao nhiêu thời gian và chi phí.</p>
+              <h4 data-i18n="svc6_ct_t">Tự Động Hóa Ngay?</h4>
+              <p data-i18n="svc6_ct_d">Hãy để chúng tôi phân tích quy trình và cho bạn thấy tiết kiệm được bao nhiêu thời gian và chi phí.</p>
               <ul class="cta-items">
-                <li><i class="bi bi-check-circle-fill"></i>Phân tích quy trình miễn phí</li>
-                <li><i class="bi bi-check-circle-fill"></i>ROI calculator cụ thể</li>
-                <li><i class="bi bi-check-circle-fill"></i>Pilot 2 tuần không rủi ro</li>
+                <li><i class="bi bi-check-circle-fill"></i><span data-i18n="svc6_ct_l1">Phân tích quy trình miễn phí</span></li>
+                <li><i class="bi bi-check-circle-fill"></i><span data-i18n="svc6_ct_l2">ROI calculator cụ thể</span></li>
+                <li><i class="bi bi-check-circle-fill"></i><span data-i18n="svc6_ct_l3">Pilot 2 tuần không rủi ro</span></li>
               </ul>
-              <a href="index.html#contact" class="btn-cta">Phân Tích Quy Trình Miễn Phí</a>
+              <a href="index.html#contact" class="btn-cta" data-i18n="svc_6_cta">Phân Tích Quy Trình Miễn Phí</a>
             </div>
           </div>
         </div>
@@ -277,28 +277,28 @@
             <div class="sd-stat-item">
               <div class="sd-stat-icon"><i class="bi bi-speedometer2"></i></div>
               <div class="sd-stat-num"><sup>-</sup><span class="purecounter" data-purecounter-start="0" data-purecounter-end="80" data-purecounter-duration="2">0</span><sup>%</sup></div>
-              <div class="sd-stat-label">Giảm Thời Gian Xử Lý</div>
+              <div class="sd-stat-label" data-i18n="svc6_st1">Giảm Thời Gian Xử Lý</div>
             </div>
           </div>
           <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
             <div class="sd-stat-item">
               <div class="sd-stat-icon"><i class="bi bi-gear-wide-connected"></i></div>
               <div class="sd-stat-num"><span class="purecounter" data-purecounter-start="0" data-purecounter-end="500" data-purecounter-duration="2">0</span><sup>+</sup></div>
-              <div class="sd-stat-label">Quy Trình Đã Tự Động Hóa</div>
+              <div class="sd-stat-label" data-i18n="svc6_st2">Quy Trình Đã Tự Động Hóa</div>
             </div>
           </div>
           <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
             <div class="sd-stat-item">
               <div class="sd-stat-icon"><i class="bi bi-graph-up-arrow"></i></div>
               <div class="sd-stat-num"><span class="purecounter" data-purecounter-start="0" data-purecounter-end="300" data-purecounter-duration="2">0</span><sup>%</sup></div>
-              <div class="sd-stat-label">Return On Investment</div>
+              <div class="sd-stat-label" data-i18n="svc6_st3">Return On Investment</div>
             </div>
           </div>
           <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
             <div class="sd-stat-item">
               <div class="sd-stat-icon"><i class="bi bi-person-check"></i></div>
               <div class="sd-stat-num"><span class="purecounter" data-purecounter-start="0" data-purecounter-end="95" data-purecounter-duration="2">0</span><sup>%</sup></div>
-              <div class="sd-stat-label">Nhân Viên Hài Lòng</div>
+              <div class="sd-stat-label" data-i18n="svc6_st4">Nhân Viên Hài Lòng</div>
             </div>
           </div>
         </div>
@@ -308,11 +308,11 @@
     <section class="section">
       <div class="container">
         <div class="sd-cta-section" data-aos="zoom-in">
-          <h3>Giải Phóng Đội Ngũ Của Bạn</h3>
-          <p>Hãy để automation xử lý công việc lặp lại — và đội ngũ của bạn có thể tập trung vào chiến lược và sáng tạo.</p>
+          <h3 data-i18n="svc6_ban_t">Giải Phóng Đội Ngũ Của Bạn</h3>
+          <p data-i18n="svc6_ban_d">Hãy để automation xử lý công việc lặp lại — và đội ngũ của bạn có thể tập trung vào chiến lược và sáng tạo.</p>
           <div class="cta-btns">
-            <a href="index.html#contact" class="btn-primary-cta">Liên Hệ Ngay</a>
-            <a href="index.html#portfolio" class="btn-outline-cta">Xem Portfolio</a>
+            <a href="index.html#contact" class="btn-primary-cta" data-i18n="svc_btn_contact">Liên Hệ Ngay</a>
+            <a href="index.html#portfolio" class="btn-outline-cta" data-i18n="svc_sh_port">Xem Portfolio</a>
           </div>
         </div>
       </div>

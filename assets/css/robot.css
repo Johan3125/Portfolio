@@ -258,7 +258,7 @@ body.dark-mode .robot-restore-btn {
 /* ──────────────────────────────────────────
    Custom Cursor
 ────────────────────────────────────────── */
-body, body * {
+body.cursor-ready, body.cursor-ready * {
   cursor: none !important;
 }
 

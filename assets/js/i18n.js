@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  let currentLang = 'en';
+  let currentLang = 'vi';
   let typedInstance = null;
 
   function initTyped(lang) {
@@ -53,7 +53,7 @@
   }
 
   window.addEventListener('load', function () {
-    apply(currentLang);
+    apply(localStorage.getItem('portfolio-lang') || 'vi');
   });
 
   window.i18n = { toggle: toggle, apply: apply };

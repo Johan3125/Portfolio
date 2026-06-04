@@ -31,7 +31,7 @@
     .lang-toggle-btn:hover,.theme-toggle-btn:hover{background:rgba(6,92,194,.2);transform:scale(1.07)}
     body.dark-mode .lang-toggle-btn,body.dark-mode .theme-toggle-btn{background:rgba(107,158,255,.12);color:#8fb5ff;border-color:rgba(107,158,255,.3)}
     body.dark-mode .lang-toggle-btn:hover,body.dark-mode .theme-toggle-btn:hover{background:rgba(107,158,255,.22)}
-    @media(max-width:576px){.fixed-toggle-buttons{right:58px;gap:5px;height:60px}.lang-toggle-btn{padding:4px 10px;font-size:11px}.theme-toggle-btn{padding:4px 8px;font-size:12px}}
+    @media(max-width:576px){.fixed-toggle-buttons{right:58px;gap:5px}.lang-toggle-btn{padding:4px 10px;font-size:11px}.theme-toggle-btn{padding:4px 8px;font-size:12px}}
     .sd-feature-card::before { background: linear-gradient(90deg, #0f766e, #134e4a); }
     .sd-step-num { background: linear-gradient(135deg, #0f766e, #134e4a); }
   </style>
@@ -98,24 +98,24 @@
       <div class="container">
         <div class="sd-hero-inner" data-aos="fade-up" data-aos-delay="100">
           <div class="sd-breadcrumb">
-            <a href="index.html">Trang chủ</a>
+            <a href="index.html" data-i18n="nav_home">Trang chủ</a>
             <i class="bi bi-chevron-right"></i>
-            <a href="index.html#services">Dịch vụ</a>
+            <a href="index.html#services" data-i18n="nav_services">Dịch vụ</a>
             <i class="bi bi-chevron-right"></i>
-            <span>Chiến Lược Tăng Trưởng</span>
+            <span data-i18n="services_3_title">Chiến Lược Tăng Trưởng</span>
           </div>
           <div class="sd-hero-icon-wrap" data-aos="zoom-in" data-aos-delay="200">
             <i class="bi bi-graph-up"></i>
           </div>
-          <h1 data-aos="fade-up" data-aos-delay="250">Chiến Lược Tăng Trưởng</h1>
-          <p class="sd-lead" data-aos="fade-up" data-aos-delay="300">Chiến lược tăng trưởng dựa trên dữ liệu giúp doanh nghiệp của bạn tăng tốc hiệu quả kỹ thuật số, tối đa hóa doanh thu và xây dựng sự hiện diện online mạnh mẽ, bền vững.</p>
+          <h1 data-aos="fade-up" data-aos-delay="250" data-i18n="services_3_title">Chiến Lược Tăng Trưởng</h1>
+          <p class="sd-lead" data-aos="fade-up" data-aos-delay="300" data-i18n="svc_3_hero_sub">Chiến lược tăng trưởng dựa trên dữ liệu giúp doanh nghiệp của bạn tăng tốc hiệu quả kỹ thuật số, tối đa hóa doanh thu và xây dựng sự hiện diện online mạnh mẽ, bền vững.</p>
           <div class="sd-hero-actions" data-aos="fade-up" data-aos-delay="350">
-            <a href="index.html#contact" class="btn-light">Liên Hệ Ngay</a>
-            <a href="index.html#services" class="btn-outline-light">Xem Tất Cả Dịch Vụ</a>
+            <a href="index.html#contact" class="btn-light" data-i18n="svc_btn_contact">Liên Hệ Ngay</a>
+            <a href="index.html#services" class="btn-outline-light" data-i18n="svc_btn_all_services">Xem Tất Cả Dịch Vụ</a>
           </div>
         </div>
       </div>
-      <div class="sd-scroll-hint"><span>Khám phá</span><i class="bi bi-chevron-down"></i></div>
+      <div class="sd-scroll-hint"><span data-i18n="svc_scroll_hint">Khám phá</span><i class="bi bi-chevron-down"></i></div>
     </section>
 
     <section class="service-details section">
@@ -124,79 +124,79 @@
           <div class="col-lg-8">
             <div class="sd-overview" data-aos="fade-up" data-aos-delay="100">
               <i class="bi bi-graph-up sd-overview-icon"></i>
-              <h2>Tăng Trưởng Bền Vững Qua Dữ Liệu</h2>
-              <p>Chúng tôi sử dụng phân tích dữ liệu chuyên sâu và các kỹ thuật growth hacking tiên tiến để tạo ra chiến lược tăng trưởng bền vững cho doanh nghiệp. Từ SEO, Content Marketing đến Performance Advertising — mỗi quyết định đều được hỗ trợ bởi dữ liệu thực tế.</p>
+              <h2 data-i18n="svc3_ov_t">Tăng Trưởng Bền Vững Qua Dữ Liệu</h2>
+              <p data-i18n="svc3_ov_d">Chúng tôi sử dụng phân tích dữ liệu chuyên sâu và các kỹ thuật growth hacking tiên tiến để tạo ra chiến lược tăng trưởng bền vững cho doanh nghiệp. Từ SEO, Content Marketing đến Performance Advertising — mỗi quyết định đều được hỗ trợ bởi dữ liệu thực tế.</p>
             </div>
 
             <div class="sd-features-grid" data-aos="fade-up" data-aos-delay="150">
-              <h3><i class="bi bi-lightning-charge me-2"></i>Tính Năng Nổi Bật</h3>
+              <h3><i class="bi bi-lightning-charge me-2"></i><span data-i18n="svc_sh_feat">Tính Năng Nổi Bật</span></h3>
               <div class="row g-3">
                 <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
                   <div class="sd-feature-card">
                     <div class="sd-feature-icon"><i class="bi bi-bar-chart"></i></div>
-                    <h5>Phân Tích Dữ Liệu</h5>
-                    <p>Theo dõi và phân tích KPIs, user behavior, conversion funnel để đưa ra quyết định dựa trên dữ liệu chính xác.</p>
+                    <h5 data-i18n="svc3_f1_t">Phân Tích Dữ Liệu</h5>
+                    <p data-i18n="svc3_f1_d">Theo dõi và phân tích KPIs, user behavior, conversion funnel để đưa ra quyết định dựa trên dữ liệu chính xác.</p>
                   </div>
                 </div>
                 <div class="col-md-6" data-aos="zoom-in" data-aos-delay="250">
                   <div class="sd-feature-card">
                     <div class="sd-feature-icon"><i class="bi bi-search"></i></div>
-                    <h5>SEO & Content</h5>
-                    <p>Tối ưu hóa công cụ tìm kiếm toàn diện và xây dựng chiến lược nội dung thu hút đúng đối tượng mục tiêu.</p>
+                    <h5 data-i18n="svc3_f2_t">SEO & Content</h5>
+                    <p data-i18n="svc3_f2_d">Tối ưu hóa công cụ tìm kiếm toàn diện và xây dựng chiến lược nội dung thu hút đúng đối tượng mục tiêu.</p>
                   </div>
                 </div>
                 <div class="col-md-6" data-aos="zoom-in" data-aos-delay="300">
                   <div class="sd-feature-card">
                     <div class="sd-feature-icon"><i class="bi bi-megaphone"></i></div>
-                    <h5>Performance Marketing</h5>
-                    <p>Chiến dịch quảng cáo đa kênh (Google, Facebook, TikTok) tối ưu ROI với ngân sách hiệu quả nhất.</p>
+                    <h5 data-i18n="svc3_f3_t">Performance Marketing</h5>
+                    <p data-i18n="svc3_f3_d">Chiến dịch quảng cáo đa kênh (Google, Facebook, TikTok) tối ưu ROI với ngân sách hiệu quả nhất.</p>
                   </div>
                 </div>
                 <div class="col-md-6" data-aos="zoom-in" data-aos-delay="350">
                   <div class="sd-feature-card">
                     <div class="sd-feature-icon"><i class="bi bi-funnel"></i></div>
-                    <h5>Tối Ưu Chuyển Đổi</h5>
-                    <p>A/B testing, landing page optimization và CRO để tăng tỷ lệ chuyển đổi và giảm chi phí thu hút khách hàng.</p>
+                    <h5 data-i18n="svc3_f4_t">Tối Ưu Chuyển Đổi</h5>
+                    <p data-i18n="svc3_f4_d">A/B testing, landing page optimization và CRO để tăng tỷ lệ chuyển đổi và giảm chi phí thu hút khách hàng.</p>
                   </div>
                 </div>
               </div>
             </div>
 
             <div class="sd-process" data-aos="fade-up" data-aos-delay="200">
-              <h3><i class="bi bi-diagram-3 me-2"></i>Quy Trình Chiến Lược</h3>
+              <h3><i class="bi bi-diagram-3 me-2"></i><span data-i18n="svc3_ph">Quy Trình Chiến Lược</span></h3>
               <div class="sd-step" data-aos="fade-right" data-aos-delay="250">
                 <div class="sd-step-num">01</div>
                 <div class="sd-step-body">
-                  <h5>Nghiên Cứu & Phân Tích</h5>
-                  <p>Phân tích thị trường, đối thủ cạnh tranh, đối tượng mục tiêu và hiệu suất hiện tại của doanh nghiệp.</p>
+                  <h5 data-i18n="svc3_s1_t">Nghiên Cứu & Phân Tích</h5>
+                  <p data-i18n="svc3_s1_d">Phân tích thị trường, đối thủ cạnh tranh, đối tượng mục tiêu và hiệu suất hiện tại của doanh nghiệp.</p>
                 </div>
               </div>
               <div class="sd-step" data-aos="fade-right" data-aos-delay="280">
                 <div class="sd-step-num">02</div>
                 <div class="sd-step-body">
-                  <h5>Xây Dựng Chiến Lược</h5>
-                  <p>Thiết lập mục tiêu SMART, xác định kênh tăng trưởng ưu tiên và lên kế hoạch hành động chi tiết.</p>
+                  <h5 data-i18n="svc3_s2_t">Xây Dựng Chiến Lược</h5>
+                  <p data-i18n="svc3_s2_d">Thiết lập mục tiêu SMART, xác định kênh tăng trưởng ưu tiên và lên kế hoạch hành động chi tiết.</p>
                 </div>
               </div>
               <div class="sd-step" data-aos="fade-right" data-aos-delay="310">
                 <div class="sd-step-num">03</div>
                 <div class="sd-step-body">
-                  <h5>Thực Thi Chiến Dịch</h5>
-                  <p>Triển khai đồng bộ các kênh marketing, tạo nội dung chất lượng và chạy các chiến dịch quảng cáo được tối ưu.</p>
+                  <h5 data-i18n="svc3_s3_t">Thực Thi Chiến Dịch</h5>
+                  <p data-i18n="svc3_s3_d">Triển khai đồng bộ các kênh marketing, tạo nội dung chất lượng và chạy các chiến dịch quảng cáo được tối ưu.</p>
                 </div>
               </div>
               <div class="sd-step" data-aos="fade-right" data-aos-delay="340">
                 <div class="sd-step-num">04</div>
                 <div class="sd-step-body">
-                  <h5>Đo Lường & Báo Cáo</h5>
-                  <p>Theo dõi KPIs real-time, phân tích kết quả và báo cáo hiệu suất hàng tuần với insights cụ thể.</p>
+                  <h5 data-i18n="svc3_s4_t">Đo Lường & Báo Cáo</h5>
+                  <p data-i18n="svc3_s4_d">Theo dõi KPIs real-time, phân tích kết quả và báo cáo hiệu suất hàng tuần với insights cụ thể.</p>
                 </div>
               </div>
               <div class="sd-step" data-aos="fade-right" data-aos-delay="370">
                 <div class="sd-step-num">05</div>
                 <div class="sd-step-body">
-                  <h5>Tối Ưu Liên Tục</h5>
-                  <p>Điều chỉnh chiến lược dựa trên dữ liệu thu thập được để liên tục cải thiện hiệu suất và tăng trưởng.</p>
+                  <h5 data-i18n="svc3_s5_t">Tối Ưu Liên Tục</h5>
+                  <p data-i18n="svc3_s5_d">Điều chỉnh chiến lược dựa trên dữ liệu thu thập được để liên tục cải thiện hiệu suất và tăng trưởng.</p>
                 </div>
               </div>
             </div>
@@ -218,35 +218,35 @@
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
             <div class="sd-sidebar-card">
-              <h4><i class="bi bi-grid me-2"></i>Tất Cả Dịch Vụ</h4>
+              <h4><i class="bi bi-grid me-2"></i><span data-i18n="svc_sh_all">Tất Cả Dịch Vụ</span></h4>
               <ul class="sd-services-list">
-                <li><a href="service-digital-solutions.html"><i class="bi bi-stack list-icon"></i><span>Giải Pháp Kỹ Thuật Số</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
-                <li><a href="service-secure-systems.html"><i class="bi bi-shield-check list-icon"></i><span>Hệ Thống Bảo Mật</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
-                <li><a href="service-growth-strategy.html" class="active"><i class="bi bi-graph-up list-icon"></i><span>Chiến Lược Tăng Trưởng</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
-                <li><a href="service-ai-integration.html"><i class="bi bi-cpu list-icon"></i><span>Tích Hợp AI</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
-                <li><a href="service-cloud.html"><i class="bi bi-cloud-arrow-up list-icon"></i><span>Dịch Vụ Cloud</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
-                <li><a href="service-automation.html"><i class="bi bi-gear list-icon"></i><span>Tự Động Hóa Quy Trình</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-digital-solutions.html"><i class="bi bi-stack list-icon"></i><span data-i18n="services_1_title">Giải Pháp Kỹ Thuật Số</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-secure-systems.html"><i class="bi bi-shield-check list-icon"></i><span data-i18n="services_2_title">Hệ Thống Bảo Mật</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-growth-strategy.html" class="active"><i class="bi bi-graph-up list-icon"></i><span data-i18n="services_3_title">Chiến Lược Tăng Trưởng</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-ai-integration.html"><i class="bi bi-cpu list-icon"></i><span data-i18n="services_4_title">Tích Hợp AI</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-cloud.html"><i class="bi bi-cloud-arrow-up list-icon"></i><span data-i18n="services_5_title">Dịch Vụ Cloud</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-automation.html"><i class="bi bi-gear list-icon"></i><span data-i18n="services_6_title">Tự Động Hóa Quy Trình</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
               </ul>
             </div>
             <div class="sd-sidebar-card">
-              <h4><i class="bi bi-info-circle me-2"></i>Thông Tin Dịch Vụ</h4>
+              <h4><i class="bi bi-info-circle me-2"></i><span data-i18n="svc_sh_info">Thông Tin Dịch Vụ</span></h4>
               <ul class="sd-info-list">
-                <li><span class="label">Thời gian:</span><span class="val">3 – 6 tháng</span></li>
-                <li><span class="label">Báo cáo:</span><span class="val">Hàng tuần</span></li>
-                <li><span class="label">KPIs:</span><span class="val">Được đảm bảo</span></li>
-                <li><span class="label">Nền tảng:</span><span class="val">Đa kênh</span></li>
-                <li><span class="label">ROI:</span><span class="val">Đo lường rõ ràng</span></li>
+                <li><span class="label" data-i18n="svc3_il1">Thời gian:</span><span class="val" data-i18n="svc3_iv1">3 – 6 tháng</span></li>
+                <li><span class="label" data-i18n="svc3_il2">Báo cáo:</span><span class="val" data-i18n="svc3_iv2">Hàng tuần</span></li>
+                <li><span class="label" data-i18n="svc3_il3">KPIs:</span><span class="val" data-i18n="svc3_iv3">Được đảm bảo</span></li>
+                <li><span class="label" data-i18n="svc3_il4">Nền tảng:</span><span class="val" data-i18n="svc3_iv4">Đa kênh</span></li>
+                <li><span class="label" data-i18n="svc3_il5">ROI:</span><span class="val" data-i18n="svc3_iv5">Đo lường rõ ràng</span></li>
               </ul>
             </div>
             <div class="sd-cta-card">
-              <h4>Tăng Trưởng Doanh Nghiệp?</h4>
-              <p>Hãy để chúng tôi giúp bạn phát triển bền vững với chiến lược tăng trưởng được cá nhân hóa.</p>
+              <h4 data-i18n="svc3_ct_t">Tăng Trưởng Doanh Nghiệp?</h4>
+              <p data-i18n="svc3_ct_d">Hãy để chúng tôi giúp bạn phát triển bền vững với chiến lược tăng trưởng được cá nhân hóa.</p>
               <ul class="cta-items">
-                <li><i class="bi bi-check-circle-fill"></i>Phân tích thị trường miễn phí</li>
-                <li><i class="bi bi-check-circle-fill"></i>Cam kết kết quả đo được</li>
-                <li><i class="bi bi-check-circle-fill"></i>Báo cáo minh bạch</li>
+                <li><i class="bi bi-check-circle-fill"></i><span data-i18n="svc3_ct_l1">Phân tích thị trường miễn phí</span></li>
+                <li><i class="bi bi-check-circle-fill"></i><span data-i18n="svc3_ct_l2">Cam kết kết quả đo được</span></li>
+                <li><i class="bi bi-check-circle-fill"></i><span data-i18n="svc3_ct_l3">Báo cáo minh bạch</span></li>
               </ul>
-              <a href="index.html#contact" class="btn-cta">Nhận Phân Tích Miễn Phí</a>
+              <a href="index.html#contact" class="btn-cta" data-i18n="svc_3_cta">Nhận Phân Tích Miễn Phí</a>
             </div>
           </div>
         </div>
@@ -263,28 +263,28 @@
             <div class="sd-stat-item">
               <div class="sd-stat-icon"><i class="bi bi-arrow-up-circle"></i></div>
               <div class="sd-stat-num"><sup>+</sup><span class="purecounter" data-purecounter-start="0" data-purecounter-end="300" data-purecounter-duration="2">0</span><sup>%</sup></div>
-              <div class="sd-stat-label">Tăng Lưu Lượng Truy Cập</div>
+              <div class="sd-stat-label" data-i18n="svc3_st1">Tăng Lưu Lượng Truy Cập</div>
             </div>
           </div>
           <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
             <div class="sd-stat-item">
               <div class="sd-stat-icon"><i class="bi bi-cursor-fill"></i></div>
               <div class="sd-stat-num"><sup>+</sup><span class="purecounter" data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="2">0</span><sup>%</sup></div>
-              <div class="sd-stat-label">Tăng Tỷ Lệ Chuyển Đổi</div>
+              <div class="sd-stat-label" data-i18n="svc3_st2">Tăng Tỷ Lệ Chuyển Đổi</div>
             </div>
           </div>
           <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
             <div class="sd-stat-item">
               <div class="sd-stat-icon"><i class="bi bi-bullseye"></i></div>
               <div class="sd-stat-num"><span class="purecounter" data-purecounter-start="0" data-purecounter-end="30" data-purecounter-duration="2">0</span><sup>+</sup></div>
-              <div class="sd-stat-label">Chiến Dịch Thành Công</div>
+              <div class="sd-stat-label" data-i18n="svc3_st3">Chiến Dịch Thành Công</div>
             </div>
           </div>
           <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
             <div class="sd-stat-item">
               <div class="sd-stat-icon"><i class="bi bi-currency-dollar"></i></div>
               <div class="sd-stat-num"><span class="purecounter" data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="2">0</span><sup>x ROI</sup></div>
-              <div class="sd-stat-label">Return On Investment</div>
+              <div class="sd-stat-label" data-i18n="svc3_st4">Return On Investment</div>
             </div>
           </div>
         </div>
@@ -294,11 +294,11 @@
     <section class="section">
       <div class="container">
         <div class="sd-cta-section" data-aos="zoom-in">
-          <h3>Sẵn Sàng Tăng Tốc Tăng Trưởng?</h3>
-          <p>Bắt đầu với phân tích thị trường miễn phí và nhận chiến lược tăng trưởng được thiết kế riêng cho doanh nghiệp của bạn.</p>
+          <h3 data-i18n="svc3_ban_t">Sẵn Sàng Tăng Tốc Tăng Trưởng?</h3>
+          <p data-i18n="svc3_ban_d">Bắt đầu với phân tích thị trường miễn phí và nhận chiến lược tăng trưởng được thiết kế riêng cho doanh nghiệp của bạn.</p>
           <div class="cta-btns">
-            <a href="index.html#contact" class="btn-primary-cta">Liên Hệ Ngay</a>
-            <a href="index.html#portfolio" class="btn-outline-cta">Xem Portfolio</a>
+            <a href="index.html#contact" class="btn-primary-cta" data-i18n="svc_btn_contact">Liên Hệ Ngay</a>
+            <a href="index.html#portfolio" class="btn-outline-cta" data-i18n="svc_sh_port">Xem Portfolio</a>
           </div>
         </div>
       </div>

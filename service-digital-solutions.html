@@ -31,7 +31,7 @@
     .lang-toggle-btn:hover,.theme-toggle-btn:hover{background:rgba(6,92,194,.2);transform:scale(1.07)}
     body.dark-mode .lang-toggle-btn,body.dark-mode .theme-toggle-btn{background:rgba(107,158,255,.12);color:#8fb5ff;border-color:rgba(107,158,255,.3)}
     body.dark-mode .lang-toggle-btn:hover,body.dark-mode .theme-toggle-btn:hover{background:rgba(107,158,255,.22)}
-    @media(max-width:576px){.fixed-toggle-buttons{right:58px;gap:5px;height:60px}.lang-toggle-btn{padding:4px 10px;font-size:11px}.theme-toggle-btn{padding:4px 8px;font-size:12px}}
+    @media(max-width:576px){.fixed-toggle-buttons{right:58px;gap:5px}.lang-toggle-btn{padding:4px 10px;font-size:11px}.theme-toggle-btn{padding:4px 8px;font-size:12px}}
   </style>
 </head>
 
@@ -99,25 +99,25 @@
       <div class="container">
         <div class="sd-hero-inner" data-aos="fade-up" data-aos-delay="100">
           <div class="sd-breadcrumb">
-            <a href="index.html">Trang chủ</a>
+            <a href="index.html" data-i18n="nav_home">Trang chủ</a>
             <i class="bi bi-chevron-right"></i>
-            <a href="index.html#services">Dịch vụ</a>
+            <a href="index.html#services" data-i18n="nav_services">Dịch vụ</a>
             <i class="bi bi-chevron-right"></i>
-            <span>Giải Pháp Kỹ Thuật Số</span>
+            <span data-i18n="services_1_title">Giải Pháp Kỹ Thuật Số</span>
           </div>
           <div class="sd-hero-icon-wrap" data-aos="zoom-in" data-aos-delay="200">
             <i class="bi bi-stack"></i>
           </div>
-          <h1 data-aos="fade-up" data-aos-delay="250">Giải Pháp Kỹ Thuật Số</h1>
-          <p class="sd-lead" data-aos="fade-up" data-aos-delay="300">Phát triển sản phẩm kỹ thuật số toàn diện — từ ý tưởng ban đầu đến triển khai thực tế. Chúng tôi xây dựng các giải pháp web, mobile và hệ thống backend tối ưu cho doanh nghiệp của bạn.</p>
+          <h1 data-aos="fade-up" data-aos-delay="250" data-i18n="services_1_title">Giải Pháp Kỹ Thuật Số</h1>
+          <p class="sd-lead" data-aos="fade-up" data-aos-delay="300" data-i18n="svc_1_hero_sub">Phát triển sản phẩm kỹ thuật số toàn diện — từ ý tưởng ban đầu đến triển khai thực tế. Chúng tôi xây dựng các giải pháp web, mobile và hệ thống backend tối ưu cho doanh nghiệp của bạn.</p>
           <div class="sd-hero-actions" data-aos="fade-up" data-aos-delay="350">
-            <a href="index.html#contact" class="btn-light">Liên Hệ Ngay</a>
-            <a href="index.html#services" class="btn-outline-light">Xem Tất Cả Dịch Vụ</a>
+            <a href="index.html#contact" class="btn-light" data-i18n="svc_btn_contact">Liên Hệ Ngay</a>
+            <a href="index.html#services" class="btn-outline-light" data-i18n="svc_btn_all_services">Xem Tất Cả Dịch Vụ</a>
           </div>
         </div>
       </div>
       <div class="sd-scroll-hint">
-        <span>Khám phá</span>
+        <span data-i18n="svc_scroll_hint">Khám phá</span>
         <i class="bi bi-chevron-down"></i>
       </div>
     </section>
@@ -132,79 +132,79 @@
 
             <div class="sd-overview" data-aos="fade-up" data-aos-delay="100">
               <i class="bi bi-stack sd-overview-icon"></i>
-              <h2>Giải Pháp Kỹ Thuật Số Toàn Diện</h2>
-              <p>Chúng tôi cung cấp dịch vụ phát triển phần mềm end-to-end, bao gồm thiết kế giao diện người dùng, xây dựng hệ thống backend mạnh mẽ, tích hợp API và triển khai trên nhiều nền tảng. Mỗi giải pháp được tùy chỉnh để đáp ứng đúng nhu cầu kinh doanh của bạn — từ startup nhỏ đến doanh nghiệp lớn.</p>
+              <h2 data-i18n="svc1_ov_t">Giải Pháp Kỹ Thuật Số Toàn Diện</h2>
+              <p data-i18n="svc1_ov_d">Chúng tôi cung cấp dịch vụ phát triển phần mềm end-to-end, bao gồm thiết kế giao diện người dùng, xây dựng hệ thống backend mạnh mẽ, tích hợp API và triển khai trên nhiều nền tảng. Mỗi giải pháp được tùy chỉnh để đáp ứng đúng nhu cầu kinh doanh của bạn — từ startup nhỏ đến doanh nghiệp lớn.</p>
             </div>
 
             <div class="sd-features-grid" data-aos="fade-up" data-aos-delay="150">
-              <h3><i class="bi bi-lightning-charge me-2"></i>Tính Năng Nổi Bật</h3>
+              <h3><i class="bi bi-lightning-charge me-2"></i><span data-i18n="svc_sh_feat">Tính Năng Nổi Bật</span></h3>
               <div class="row g-3">
                 <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
                   <div class="sd-feature-card">
                     <div class="sd-feature-icon"><i class="bi bi-globe"></i></div>
-                    <h5>Phát Triển Web</h5>
-                    <p>Website và ứng dụng web hiệu suất cao, responsive, tối ưu SEO với công nghệ hiện đại nhất.</p>
+                    <h5 data-i18n="svc1_f1_t">Phát Triển Web</h5>
+                    <p data-i18n="svc1_f1_d">Website và ứng dụng web hiệu suất cao, responsive, tối ưu SEO với công nghệ hiện đại nhất.</p>
                   </div>
                 </div>
                 <div class="col-md-6" data-aos="zoom-in" data-aos-delay="250">
                   <div class="sd-feature-card">
                     <div class="sd-feature-icon"><i class="bi bi-phone"></i></div>
-                    <h5>Ứng Dụng Mobile</h5>
-                    <p>App iOS và Android với trải nghiệm người dùng mượt mà, tích hợp đầy đủ tính năng theo yêu cầu.</p>
+                    <h5 data-i18n="svc1_f2_t">Ứng Dụng Mobile</h5>
+                    <p data-i18n="svc1_f2_d">App iOS và Android với trải nghiệm người dùng mượt mà, tích hợp đầy đủ tính năng theo yêu cầu.</p>
                   </div>
                 </div>
                 <div class="col-md-6" data-aos="zoom-in" data-aos-delay="300">
                   <div class="sd-feature-card">
                     <div class="sd-feature-icon"><i class="bi bi-plugin"></i></div>
-                    <h5>API & Backend</h5>
-                    <p>Hệ thống backend scalable, RESTful API và microservices đảm bảo hiệu suất và độ tin cậy cao.</p>
+                    <h5 data-i18n="svc1_f3_t">API & Backend</h5>
+                    <p data-i18n="svc1_f3_d">Hệ thống backend scalable, RESTful API và microservices đảm bảo hiệu suất và độ tin cậy cao.</p>
                   </div>
                 </div>
                 <div class="col-md-6" data-aos="zoom-in" data-aos-delay="350">
                   <div class="sd-feature-card">
                     <div class="sd-feature-icon"><i class="bi bi-layout-text-window"></i></div>
-                    <h5>Hệ Thống CMS</h5>
-                    <p>Nền tảng quản lý nội dung tùy chỉnh giúp bạn dễ dàng cập nhật và quản lý website của mình.</p>
+                    <h5 data-i18n="svc1_f4_t">Hệ Thống CMS</h5>
+                    <p data-i18n="svc1_f4_d">Nền tảng quản lý nội dung tùy chỉnh giúp bạn dễ dàng cập nhật và quản lý website của mình.</p>
                   </div>
                 </div>
               </div>
             </div>
 
             <div class="sd-process" data-aos="fade-up" data-aos-delay="200">
-              <h3><i class="bi bi-diagram-3 me-2"></i>Quy Trình Làm Việc</h3>
+              <h3><i class="bi bi-diagram-3 me-2"></i><span data-i18n="svc1_ph">Quy Trình Làm Việc</span></h3>
               <div class="sd-step" data-aos="fade-right" data-aos-delay="250">
                 <div class="sd-step-num">01</div>
                 <div class="sd-step-body">
-                  <h5>Phân Tích & Lên Kế Hoạch</h5>
-                  <p>Thu thập yêu cầu, phân tích business goals, xác định phạm vi dự án và lập kế hoạch chi tiết với timeline rõ ràng.</p>
+                  <h5 data-i18n="svc1_s1_t">Phân Tích & Lên Kế Hoạch</h5>
+                  <p data-i18n="svc1_s1_d">Thu thập yêu cầu, phân tích business goals, xác định phạm vi dự án và lập kế hoạch chi tiết với timeline rõ ràng.</p>
                 </div>
               </div>
               <div class="sd-step" data-aos="fade-right" data-aos-delay="280">
                 <div class="sd-step-num">02</div>
                 <div class="sd-step-body">
-                  <h5>Thiết Kế UI/UX</h5>
-                  <p>Tạo wireframes, prototype và thiết kế giao diện đẹp mắt, dễ sử dụng với trọng tâm là trải nghiệm người dùng.</p>
+                  <h5 data-i18n="svc1_s2_t">Thiết Kế UI/UX</h5>
+                  <p data-i18n="svc1_s2_d">Tạo wireframes, prototype và thiết kế giao diện đẹp mắt, dễ sử dụng với trọng tâm là trải nghiệm người dùng.</p>
                 </div>
               </div>
               <div class="sd-step" data-aos="fade-right" data-aos-delay="310">
                 <div class="sd-step-num">03</div>
                 <div class="sd-step-body">
-                  <h5>Phát Triển</h5>
-                  <p>Code clean, có cấu trúc rõ ràng theo các best practices, sử dụng framework và công nghệ phù hợp nhất cho dự án.</p>
+                  <h5 data-i18n="svc1_s3_t">Phát Triển</h5>
+                  <p data-i18n="svc1_s3_d">Code clean, có cấu trúc rõ ràng theo các best practices, sử dụng framework và công nghệ phù hợp nhất cho dự án.</p>
                 </div>
               </div>
               <div class="sd-step" data-aos="fade-right" data-aos-delay="340">
                 <div class="sd-step-num">04</div>
                 <div class="sd-step-body">
-                  <h5>Kiểm Thử & QA</h5>
-                  <p>Kiểm tra kỹ lưỡng trên nhiều thiết bị và trình duyệt, đảm bảo không có lỗi trước khi ra mắt sản phẩm.</p>
+                  <h5 data-i18n="svc1_s4_t">Kiểm Thử & QA</h5>
+                  <p data-i18n="svc1_s4_d">Kiểm tra kỹ lưỡng trên nhiều thiết bị và trình duyệt, đảm bảo không có lỗi trước khi ra mắt sản phẩm.</p>
                 </div>
               </div>
               <div class="sd-step" data-aos="fade-right" data-aos-delay="370">
                 <div class="sd-step-num">05</div>
                 <div class="sd-step-body">
-                  <h5>Triển Khai & Hỗ Trợ</h5>
-                  <p>Deploy lên production, monitoring, bảo trì và hỗ trợ kỹ thuật liên tục sau khi ra mắt.</p>
+                  <h5 data-i18n="svc1_s5_t">Triển Khai & Hỗ Trợ</h5>
+                  <p data-i18n="svc1_s5_d">Deploy lên production, monitoring, bảo trì và hỗ trợ kỹ thuật liên tục sau khi ra mắt.</p>
                 </div>
               </div>
             </div>
@@ -227,37 +227,37 @@
           <!-- Sidebar -->
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
             <div class="sd-sidebar-card">
-              <h4><i class="bi bi-grid me-2"></i>Tất Cả Dịch Vụ</h4>
+              <h4><i class="bi bi-grid me-2"></i><span data-i18n="svc_sh_all">Tất Cả Dịch Vụ</span></h4>
               <ul class="sd-services-list">
-                <li><a href="service-digital-solutions.html" class="active"><i class="bi bi-stack list-icon"></i><span>Giải Pháp Kỹ Thuật Số</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
-                <li><a href="service-secure-systems.html"><i class="bi bi-shield-check list-icon"></i><span>Hệ Thống Bảo Mật</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
-                <li><a href="service-growth-strategy.html"><i class="bi bi-graph-up list-icon"></i><span>Chiến Lược Tăng Trưởng</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
-                <li><a href="service-ai-integration.html"><i class="bi bi-cpu list-icon"></i><span>Tích Hợp AI</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
-                <li><a href="service-cloud.html"><i class="bi bi-cloud-arrow-up list-icon"></i><span>Dịch Vụ Cloud</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
-                <li><a href="service-automation.html"><i class="bi bi-gear list-icon"></i><span>Tự Động Hóa Quy Trình</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-digital-solutions.html" class="active"><i class="bi bi-stack list-icon"></i><span data-i18n="services_1_title">Giải Pháp Kỹ Thuật Số</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-secure-systems.html"><i class="bi bi-shield-check list-icon"></i><span data-i18n="services_2_title">Hệ Thống Bảo Mật</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-growth-strategy.html"><i class="bi bi-graph-up list-icon"></i><span data-i18n="services_3_title">Chiến Lược Tăng Trưởng</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-ai-integration.html"><i class="bi bi-cpu list-icon"></i><span data-i18n="services_4_title">Tích Hợp AI</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-cloud.html"><i class="bi bi-cloud-arrow-up list-icon"></i><span data-i18n="services_5_title">Dịch Vụ Cloud</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-automation.html"><i class="bi bi-gear list-icon"></i><span data-i18n="services_6_title">Tự Động Hóa Quy Trình</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
               </ul>
             </div>
 
             <div class="sd-sidebar-card">
-              <h4><i class="bi bi-info-circle me-2"></i>Thông Tin Dịch Vụ</h4>
+              <h4><i class="bi bi-info-circle me-2"></i><span data-i18n="svc_sh_info">Thông Tin Dịch Vụ</span></h4>
               <ul class="sd-info-list">
-                <li><span class="label">Thời gian:</span><span class="val">4 – 12 tuần</span></li>
-                <li><span class="label">Đội ngũ:</span><span class="val">3 – 6 chuyên gia</span></li>
-                <li><span class="label">Bàn giao:</span><span class="val">Theo milestone</span></li>
-                <li><span class="label">Hỗ trợ:</span><span class="val">6 tháng sau launch</span></li>
-                <li><span class="label">Bảo hành:</span><span class="val">12 tháng</span></li>
+                <li><span class="label" data-i18n="svc1_il1">Thời gian:</span><span class="val" data-i18n="svc1_iv1">4 – 12 tuần</span></li>
+                <li><span class="label" data-i18n="svc1_il2">Đội ngũ:</span><span class="val" data-i18n="svc1_iv2">3 – 6 chuyên gia</span></li>
+                <li><span class="label" data-i18n="svc1_il3">Bàn giao:</span><span class="val" data-i18n="svc1_iv3">Theo milestone</span></li>
+                <li><span class="label" data-i18n="svc1_il4">Hỗ trợ:</span><span class="val" data-i18n="svc1_iv4">6 tháng sau launch</span></li>
+                <li><span class="label" data-i18n="svc1_il5">Bảo hành:</span><span class="val" data-i18n="svc1_iv5">12 tháng</span></li>
               </ul>
             </div>
 
             <div class="sd-cta-card">
-              <h4>Bắt Đầu Dự Án Của Bạn?</h4>
-              <p>Hãy để chúng tôi biến ý tưởng của bạn thành sản phẩm kỹ thuật số thực sự.</p>
+              <h4 data-i18n="svc1_ct_t">Bắt Đầu Dự Án Của Bạn?</h4>
+              <p data-i18n="svc1_ct_d">Hãy để chúng tôi biến ý tưởng của bạn thành sản phẩm kỹ thuật số thực sự.</p>
               <ul class="cta-items">
-                <li><i class="bi bi-check-circle-fill"></i>Tư vấn miễn phí</li>
-                <li><i class="bi bi-check-circle-fill"></i>Báo giá trong 24h</li>
-                <li><i class="bi bi-check-circle-fill"></i>Không ràng buộc hợp đồng</li>
+                <li><i class="bi bi-check-circle-fill"></i><span data-i18n="svc1_ct_l1">Tư vấn miễn phí</span></li>
+                <li><i class="bi bi-check-circle-fill"></i><span data-i18n="svc1_ct_l2">Báo giá trong 24h</span></li>
+                <li><i class="bi bi-check-circle-fill"></i><span data-i18n="svc1_ct_l3">Không ràng buộc hợp đồng</span></li>
               </ul>
-              <a href="index.html#contact" class="btn-cta">Nhận Tư Vấn Miễn Phí</a>
+              <a href="index.html#contact" class="btn-cta" data-i18n="svc_1_cta">Nhận Tư Vấn Miễn Phí</a>
             </div>
           </div>
 
@@ -276,28 +276,28 @@
             <div class="sd-stat-item">
               <div class="sd-stat-icon"><i class="bi bi-briefcase"></i></div>
               <div class="sd-stat-num"><span class="purecounter" data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="2">0</span><sup>+</sup></div>
-              <div class="sd-stat-label">Dự Án Hoàn Thành</div>
+              <div class="sd-stat-label" data-i18n="svc1_st1">Dự Án Hoàn Thành</div>
             </div>
           </div>
           <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
             <div class="sd-stat-item">
               <div class="sd-stat-icon"><i class="bi bi-emoji-smile"></i></div>
               <div class="sd-stat-num"><span class="purecounter" data-purecounter-start="0" data-purecounter-end="98" data-purecounter-duration="2">0</span><sup>%</sup></div>
-              <div class="sd-stat-label">Khách Hàng Hài Lòng</div>
+              <div class="sd-stat-label" data-i18n="svc1_st2">Khách Hàng Hài Lòng</div>
             </div>
           </div>
           <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
             <div class="sd-stat-item">
               <div class="sd-stat-icon"><i class="bi bi-clock-history"></i></div>
               <div class="sd-stat-num"><span class="purecounter" data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="2">0</span><sup>+</sup></div>
-              <div class="sd-stat-label">Năm Kinh Nghiệm</div>
+              <div class="sd-stat-label" data-i18n="svc1_st3">Năm Kinh Nghiệm</div>
             </div>
           </div>
           <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
             <div class="sd-stat-item">
               <div class="sd-stat-icon"><i class="bi bi-headset"></i></div>
               <div class="sd-stat-num">24<sup>/7</sup></div>
-              <div class="sd-stat-label">Hỗ Trợ Kỹ Thuật</div>
+              <div class="sd-stat-label" data-i18n="svc1_st4">Hỗ Trợ Kỹ Thuật</div>
             </div>
           </div>
         </div>
@@ -308,11 +308,11 @@
     <section class="section">
       <div class="container">
         <div class="sd-cta-section" data-aos="zoom-in">
-          <h3>Sẵn Sàng Bắt Đầu Dự Án?</h3>
-          <p>Liên hệ với chúng tôi ngay hôm nay để nhận tư vấn miễn phí và báo giá chi tiết cho dự án của bạn.</p>
+          <h3 data-i18n="svc1_ban_t">Sẵn Sàng Bắt Đầu Dự Án?</h3>
+          <p data-i18n="svc1_ban_d">Liên hệ với chúng tôi ngay hôm nay để nhận tư vấn miễn phí và báo giá chi tiết cho dự án của bạn.</p>
           <div class="cta-btns">
-            <a href="index.html#contact" class="btn-primary-cta">Liên Hệ Ngay</a>
-            <a href="index.html#portfolio" class="btn-outline-cta">Xem Portfolio</a>
+            <a href="index.html#contact" class="btn-primary-cta" data-i18n="svc_btn_contact">Liên Hệ Ngay</a>
+            <a href="index.html#portfolio" class="btn-outline-cta" data-i18n="svc_sh_port">Xem Portfolio</a>
           </div>
         </div>
       </div>

@@ -338,6 +338,7 @@
     var outX = 0, outY = 0;
     var raf;
 
+    document.body.classList.add('cursor-ready');
     document.addEventListener('mousemove', function (e) {
       mouseX = e.clientX;
       mouseY = e.clientY;

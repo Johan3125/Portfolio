@@ -31,7 +31,7 @@
     .lang-toggle-btn:hover,.theme-toggle-btn:hover{background:rgba(6,92,194,.2);transform:scale(1.07)}
     body.dark-mode .lang-toggle-btn,body.dark-mode .theme-toggle-btn{background:rgba(107,158,255,.12);color:#8fb5ff;border-color:rgba(107,158,255,.3)}
     body.dark-mode .lang-toggle-btn:hover,body.dark-mode .theme-toggle-btn:hover{background:rgba(107,158,255,.22)}
-    @media(max-width:576px){.fixed-toggle-buttons{right:58px;gap:5px;height:60px}.lang-toggle-btn{padding:4px 10px;font-size:11px}.theme-toggle-btn{padding:4px 8px;font-size:12px}}
+    @media(max-width:576px){.fixed-toggle-buttons{right:58px;gap:5px}.lang-toggle-btn{padding:4px 10px;font-size:11px}.theme-toggle-btn{padding:4px 8px;font-size:12px}}
     .sd-feature-card::before { background: linear-gradient(90deg, #6d28d9, #4c1d95); }
     .sd-step-num { background: linear-gradient(135deg, #6d28d9, #4c1d95); }
     /* Animated neural network lines for hero */
@@ -114,24 +114,24 @@
       <div class="container">
         <div class="sd-hero-inner" data-aos="fade-up" data-aos-delay="100">
           <div class="sd-breadcrumb">
-            <a href="index.html">Trang chủ</a>
+            <a href="index.html" data-i18n="nav_home">Trang chủ</a>
             <i class="bi bi-chevron-right"></i>
-            <a href="index.html#services">Dịch vụ</a>
+            <a href="index.html#services" data-i18n="nav_services">Dịch vụ</a>
             <i class="bi bi-chevron-right"></i>
-            <span>Tích Hợp AI</span>
+            <span data-i18n="services_4_title">Tích Hợp AI</span>
           </div>
           <div class="sd-hero-icon-wrap" data-aos="zoom-in" data-aos-delay="200">
             <i class="bi bi-cpu"></i>
           </div>
-          <h1 data-aos="fade-up" data-aos-delay="250">Tích Hợp AI</h1>
-          <p class="sd-lead" data-aos="fade-up" data-aos-delay="300">Tích hợp trí tuệ nhân tạo một cách liền mạch vào hệ thống của bạn để tự động hóa quy trình, phân tích dữ liệu thông minh và mở khóa những khả năng hoàn toàn mới cho doanh nghiệp.</p>
+          <h1 data-aos="fade-up" data-aos-delay="250" data-i18n="services_4_title">Tích Hợp AI</h1>
+          <p class="sd-lead" data-aos="fade-up" data-aos-delay="300" data-i18n="svc_4_hero_sub">Tích hợp trí tuệ nhân tạo một cách liền mạch vào hệ thống của bạn để tự động hóa quy trình, phân tích dữ liệu thông minh và mở khóa những khả năng hoàn toàn mới cho doanh nghiệp.</p>
           <div class="sd-hero-actions" data-aos="fade-up" data-aos-delay="350">
-            <a href="index.html#contact" class="btn-light">Liên Hệ Ngay</a>
-            <a href="index.html#services" class="btn-outline-light">Xem Tất Cả Dịch Vụ</a>
+            <a href="index.html#contact" class="btn-light" data-i18n="svc_btn_contact">Liên Hệ Ngay</a>
+            <a href="index.html#services" class="btn-outline-light" data-i18n="svc_btn_all_services">Xem Tất Cả Dịch Vụ</a>
           </div>
         </div>
       </div>
-      <div class="sd-scroll-hint"><span>Khám phá</span><i class="bi bi-chevron-down"></i></div>
+      <div class="sd-scroll-hint"><span data-i18n="svc_scroll_hint">Khám phá</span><i class="bi bi-chevron-down"></i></div>
     </section>
 
     <section class="service-details section">
@@ -140,79 +140,79 @@
           <div class="col-lg-8">
             <div class="sd-overview" data-aos="fade-up" data-aos-delay="100">
               <i class="bi bi-cpu sd-overview-icon"></i>
-              <h2>AI Thông Minh Cho Doanh Nghiệp Hiện Đại</h2>
-              <p>Chúng tôi giúp doanh nghiệp tận dụng sức mạnh của trí tuệ nhân tạo — từ Machine Learning và xử lý ngôn ngữ tự nhiên đến Computer Vision và AI chatbot. Mỗi giải pháp AI được thiết kế và tích hợp chặt chẽ với quy trình kinh doanh hiện tại của bạn để tạo ra giá trị thực sự.</p>
+              <h2 data-i18n="svc4_ov_t">AI Thông Minh Cho Doanh Nghiệp Hiện Đại</h2>
+              <p data-i18n="svc4_ov_d">Chúng tôi giúp doanh nghiệp tận dụng sức mạnh của trí tuệ nhân tạo — từ Machine Learning và xử lý ngôn ngữ tự nhiên đến Computer Vision và AI chatbot. Mỗi giải pháp AI được thiết kế và tích hợp chặt chẽ với quy trình kinh doanh hiện tại của bạn để tạo ra giá trị thực sự.</p>
             </div>
 
             <div class="sd-features-grid" data-aos="fade-up" data-aos-delay="150">
-              <h3><i class="bi bi-lightning-charge me-2"></i>Tính Năng Nổi Bật</h3>
+              <h3><i class="bi bi-lightning-charge me-2"></i><span data-i18n="svc_sh_feat">Tính Năng Nổi Bật</span></h3>
               <div class="row g-3">
                 <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
                   <div class="sd-feature-card">
                     <div class="sd-feature-icon"><i class="bi bi-robot"></i></div>
-                    <h5>Machine Learning</h5>
-                    <p>Xây dựng và triển khai các mô hình ML để dự đoán, phân loại và phát hiện pattern từ dữ liệu của bạn.</p>
+                    <h5 data-i18n="svc4_f1_t">Machine Learning</h5>
+                    <p data-i18n="svc4_f1_d">Xây dựng và triển khai các mô hình ML để dự đoán, phân loại và phát hiện pattern từ dữ liệu của bạn.</p>
                   </div>
                 </div>
                 <div class="col-md-6" data-aos="zoom-in" data-aos-delay="250">
                   <div class="sd-feature-card">
                     <div class="sd-feature-icon"><i class="bi bi-chat-text"></i></div>
-                    <h5>Xử Lý Ngôn Ngữ Tự Nhiên</h5>
-                    <p>NLP cho phân tích sentiment, chatbot thông minh, dịch thuật tự động và tóm tắt tài liệu chuyên nghiệp.</p>
+                    <h5 data-i18n="svc4_f2_t">Xử Lý Ngôn Ngữ Tự Nhiên</h5>
+                    <p data-i18n="svc4_f2_d">NLP cho phân tích sentiment, chatbot thông minh, dịch thuật tự động và tóm tắt tài liệu chuyên nghiệp.</p>
                   </div>
                 </div>
                 <div class="col-md-6" data-aos="zoom-in" data-aos-delay="300">
                   <div class="sd-feature-card">
                     <div class="sd-feature-icon"><i class="bi bi-eye"></i></div>
-                    <h5>Computer Vision</h5>
-                    <p>Nhận diện hình ảnh, object detection, OCR và phân tích video phục vụ kiểm soát chất lượng và bảo mật.</p>
+                    <h5 data-i18n="svc4_f3_t">Computer Vision</h5>
+                    <p data-i18n="svc4_f3_d">Nhận diện hình ảnh, object detection, OCR và phân tích video phục vụ kiểm soát chất lượng và bảo mật.</p>
                   </div>
                 </div>
                 <div class="col-md-6" data-aos="zoom-in" data-aos-delay="350">
                   <div class="sd-feature-card">
                     <div class="sd-feature-icon"><i class="bi bi-chat-dots"></i></div>
-                    <h5>AI Chatbot & Assistant</h5>
-                    <p>Chatbot thông minh phục vụ khách hàng 24/7, tích hợp LLM tiên tiến với kiến thức về sản phẩm của bạn.</p>
+                    <h5 data-i18n="svc4_f4_t">AI Chatbot & Assistant</h5>
+                    <p data-i18n="svc4_f4_d">Chatbot thông minh phục vụ khách hàng 24/7, tích hợp LLM tiên tiến với kiến thức về sản phẩm của bạn.</p>
                   </div>
                 </div>
               </div>
             </div>
 
             <div class="sd-process" data-aos="fade-up" data-aos-delay="200">
-              <h3><i class="bi bi-diagram-3 me-2"></i>Quy Trình Triển Khai AI</h3>
+              <h3><i class="bi bi-diagram-3 me-2"></i><span data-i18n="svc4_ph">Quy Trình Triển Khai AI</span></h3>
               <div class="sd-step" data-aos="fade-right" data-aos-delay="250">
                 <div class="sd-step-num">01</div>
                 <div class="sd-step-body">
-                  <h5>Phân Tích Dữ Liệu & Use Case</h5>
-                  <p>Khảo sát dữ liệu hiện có, xác định bài toán kinh doanh phù hợp nhất để ứng dụng AI và định nghĩa thành công.</p>
+                  <h5 data-i18n="svc4_s1_t">Phân Tích Dữ Liệu & Use Case</h5>
+                  <p data-i18n="svc4_s1_d">Khảo sát dữ liệu hiện có, xác định bài toán kinh doanh phù hợp nhất để ứng dụng AI và định nghĩa thành công.</p>
                 </div>
               </div>
               <div class="sd-step" data-aos="fade-right" data-aos-delay="280">
                 <div class="sd-step-num">02</div>
                 <div class="sd-step-body">
-                  <h5>Chuẩn Bị & Làm Sạch Dữ Liệu</h5>
-                  <p>Thu thập, làm sạch và chuẩn hóa dữ liệu training — bước quan trọng nhất quyết định chất lượng mô hình AI.</p>
+                  <h5 data-i18n="svc4_s2_t">Chuẩn Bị & Làm Sạch Dữ Liệu</h5>
+                  <p data-i18n="svc4_s2_d">Thu thập, làm sạch và chuẩn hóa dữ liệu training — bước quan trọng nhất quyết định chất lượng mô hình AI.</p>
                 </div>
               </div>
               <div class="sd-step" data-aos="fade-right" data-aos-delay="310">
                 <div class="sd-step-num">03</div>
                 <div class="sd-step-body">
-                  <h5>Xây Dựng & Huấn Luyện Mô Hình</h5>
-                  <p>Thiết kế kiến trúc mô hình, huấn luyện, fine-tuning và đánh giá hiệu suất với các metrics phù hợp.</p>
+                  <h5 data-i18n="svc4_s3_t">Xây Dựng & Huấn Luyện Mô Hình</h5>
+                  <p data-i18n="svc4_s3_d">Thiết kế kiến trúc mô hình, huấn luyện, fine-tuning và đánh giá hiệu suất với các metrics phù hợp.</p>
                 </div>
               </div>
               <div class="sd-step" data-aos="fade-right" data-aos-delay="340">
                 <div class="sd-step-num">04</div>
                 <div class="sd-step-body">
-                  <h5>Tích Hợp Vào Hệ Thống</h5>
-                  <p>Tích hợp mô hình AI vào hệ thống hiện tại qua API, đảm bảo hiệu suất real-time và độ tin cậy cao.</p>
+                  <h5 data-i18n="svc4_s4_t">Tích Hợp Vào Hệ Thống</h5>
+                  <p data-i18n="svc4_s4_d">Tích hợp mô hình AI vào hệ thống hiện tại qua API, đảm bảo hiệu suất real-time và độ tin cậy cao.</p>
                 </div>
               </div>
               <div class="sd-step" data-aos="fade-right" data-aos-delay="370">
                 <div class="sd-step-num">05</div>
                 <div class="sd-step-body">
-                  <h5>Giám Sát & Cải Thiện Liên Tục</h5>
-                  <p>Theo dõi hiệu suất mô hình, phát hiện data drift và tái huấn luyện để duy trì độ chính xác theo thời gian.</p>
+                  <h5 data-i18n="svc4_s5_t">Giám Sát & Cải Thiện Liên Tục</h5>
+                  <p data-i18n="svc4_s5_d">Theo dõi hiệu suất mô hình, phát hiện data drift và tái huấn luyện để duy trì độ chính xác theo thời gian.</p>
                 </div>
               </div>
             </div>
@@ -232,35 +232,35 @@
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
             <div class="sd-sidebar-card">
-              <h4><i class="bi bi-grid me-2"></i>Tất Cả Dịch Vụ</h4>
+              <h4><i class="bi bi-grid me-2"></i><span data-i18n="svc_sh_all">Tất Cả Dịch Vụ</span></h4>
               <ul class="sd-services-list">
-                <li><a href="service-digital-solutions.html"><i class="bi bi-stack list-icon"></i><span>Giải Pháp Kỹ Thuật Số</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
-                <li><a href="service-secure-systems.html"><i class="bi bi-shield-check list-icon"></i><span>Hệ Thống Bảo Mật</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
-                <li><a href="service-growth-strategy.html"><i class="bi bi-graph-up list-icon"></i><span>Chiến Lược Tăng Trưởng</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
-                <li><a href="service-ai-integration.html" class="active"><i class="bi bi-cpu list-icon"></i><span>Tích Hợp AI</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
-                <li><a href="service-cloud.html"><i class="bi bi-cloud-arrow-up list-icon"></i><span>Dịch Vụ Cloud</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
-                <li><a href="service-automation.html"><i class="bi bi-gear list-icon"></i><span>Tự Động Hóa Quy Trình</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-digital-solutions.html"><i class="bi bi-stack list-icon"></i><span data-i18n="services_1_title">Giải Pháp Kỹ Thuật Số</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-secure-systems.html"><i class="bi bi-shield-check list-icon"></i><span data-i18n="services_2_title">Hệ Thống Bảo Mật</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-growth-strategy.html"><i class="bi bi-graph-up list-icon"></i><span data-i18n="services_3_title">Chiến Lược Tăng Trưởng</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-ai-integration.html" class="active"><i class="bi bi-cpu list-icon"></i><span data-i18n="services_4_title">Tích Hợp AI</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-cloud.html"><i class="bi bi-cloud-arrow-up list-icon"></i><span data-i18n="services_5_title">Dịch Vụ Cloud</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
+                <li><a href="service-automation.html"><i class="bi bi-gear list-icon"></i><span data-i18n="services_6_title">Tự Động Hóa Quy Trình</span><i class="bi bi-arrow-right arrow-icon"></i></a></li>
               </ul>
             </div>
             <div class="sd-sidebar-card">
-              <h4><i class="bi bi-info-circle me-2"></i>Thông Tin Dịch Vụ</h4>
+              <h4><i class="bi bi-info-circle me-2"></i><span data-i18n="svc_sh_info">Thông Tin Dịch Vụ</span></h4>
               <ul class="sd-info-list">
-                <li><span class="label">Thời gian:</span><span class="val">6 – 16 tuần</span></li>
-                <li><span class="label">Độ chính xác:</span><span class="val">&gt;95%</span></li>
-                <li><span class="label">Framework:</span><span class="val">TF / PyTorch</span></li>
-                <li><span class="label">MLOps:</span><span class="val">Tự động hóa</span></li>
-                <li><span class="label">Hỗ trợ:</span><span class="val">12 tháng</span></li>
+                <li><span class="label" data-i18n="svc4_il1">Thời gian:</span><span class="val" data-i18n="svc4_iv1">6 – 16 tuần</span></li>
+                <li><span class="label" data-i18n="svc4_il2">Độ chính xác:</span><span class="val" data-i18n="svc4_iv2">&gt;95%</span></li>
+                <li><span class="label" data-i18n="svc4_il3">Framework:</span><span class="val" data-i18n="svc4_iv3">TF / PyTorch</span></li>
+                <li><span class="label" data-i18n="svc4_il4">MLOps:</span><span class="val" data-i18n="svc4_iv4">Tự động hóa</span></li>
+                <li><span class="label" data-i18n="svc4_il5">Hỗ trợ:</span><span class="val" data-i18n="svc4_iv5">12 tháng</span></li>
               </ul>
             </div>
             <div class="sd-cta-card">
-              <h4>Đưa AI Vào Doanh Nghiệp?</h4>
-              <p>Hãy để chúng tôi giúp bạn khám phá cách AI có thể tạo ra lợi thế cạnh tranh thực sự.</p>
+              <h4 data-i18n="svc4_ct_t">Đưa AI Vào Doanh Nghiệp?</h4>
+              <p data-i18n="svc4_ct_d">Hãy để chúng tôi giúp bạn khám phá cách AI có thể tạo ra lợi thế cạnh tranh thực sự.</p>
               <ul class="cta-items">
-                <li><i class="bi bi-check-circle-fill"></i>Tư vấn AI use case miễn phí</li>
-                <li><i class="bi bi-check-circle-fill"></i>POC trong 2 tuần</li>
-                <li><i class="bi bi-check-circle-fill"></i>ROI đo lường được</li>
+                <li><i class="bi bi-check-circle-fill"></i><span data-i18n="svc4_ct_l1">Tư vấn AI use case miễn phí</span></li>
+                <li><i class="bi bi-check-circle-fill"></i><span data-i18n="svc4_ct_l2">POC trong 2 tuần</span></li>
+                <li><i class="bi bi-check-circle-fill"></i><span data-i18n="svc4_ct_l3">ROI đo lường được</span></li>
               </ul>
-              <a href="index.html#contact" class="btn-cta">Khám Phá AI Cùng Chúng Tôi</a>
+              <a href="index.html#contact" class="btn-cta" data-i18n="svc_4_cta">Khám Phá AI Cùng Chúng Tôi</a>
             </div>
           </div>
         </div>
@@ -277,28 +277,28 @@
             <div class="sd-stat-item">
               <div class="sd-stat-icon"><i class="bi bi-robot"></i></div>
               <div class="sd-stat-num"><span class="purecounter" data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="2">0</span><sup>+</sup></div>
-              <div class="sd-stat-label">Mô Hình AI Triển Khai</div>
+              <div class="sd-stat-label" data-i18n="svc4_st1">Mô Hình AI Triển Khai</div>
             </div>
           </div>
           <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
             <div class="sd-stat-item">
               <div class="sd-stat-icon"><i class="bi bi-bullseye"></i></div>
               <div class="sd-stat-num"><span class="purecounter" data-purecounter-start="0" data-purecounter-end="95" data-purecounter-duration="2">0</span><sup>%</sup></div>
-              <div class="sd-stat-label">Độ Chính Xác Trung Bình</div>
+              <div class="sd-stat-label" data-i18n="svc4_st2">Độ Chính Xác Trung Bình</div>
             </div>
           </div>
           <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
             <div class="sd-stat-item">
               <div class="sd-stat-icon"><i class="bi bi-speedometer2"></i></div>
               <div class="sd-stat-num"><sup>-</sup><span class="purecounter" data-purecounter-start="0" data-purecounter-end="60" data-purecounter-duration="2">0</span><sup>%</sup></div>
-              <div class="sd-stat-label">Giảm Thời Gian Xử Lý</div>
+              <div class="sd-stat-label" data-i18n="svc4_st3">Giảm Thời Gian Xử Lý</div>
             </div>
           </div>
           <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
             <div class="sd-stat-item">
               <div class="sd-stat-icon"><i class="bi bi-graph-up-arrow"></i></div>
               <div class="sd-stat-num"><span class="purecounter" data-purecounter-start="0" data-purecounter-end="40" data-purecounter-duration="2">0</span><sup>%</sup></div>
-              <div class="sd-stat-label">Tăng Năng Suất</div>
+              <div class="sd-stat-label" data-i18n="svc4_st4">Tăng Năng Suất</div>
             </div>
           </div>
         </div>
@@ -308,11 +308,11 @@
     <section class="section">
       <div class="container">
         <div class="sd-cta-section" data-aos="zoom-in">
-          <h3>Tương Lai Là AI — Bắt Đầu Hôm Nay</h3>
-          <p>Liên hệ với chúng tôi để khám phá cách AI có thể biến đổi doanh nghiệp và tạo lợi thế cạnh tranh bền vững.</p>
+          <h3 data-i18n="svc4_ban_t">Tương Lai Là AI — Bắt Đầu Hôm Nay</h3>
+          <p data-i18n="svc4_ban_d">Liên hệ với chúng tôi để khám phá cách AI có thể biến đổi doanh nghiệp và tạo lợi thế cạnh tranh bền vững.</p>
           <div class="cta-btns">
-            <a href="index.html#contact" class="btn-primary-cta">Liên Hệ Ngay</a>
-            <a href="index.html#portfolio" class="btn-outline-cta">Xem Portfolio</a>
+            <a href="index.html#contact" class="btn-primary-cta" data-i18n="svc_btn_contact">Liên Hệ Ngay</a>
+            <a href="index.html#portfolio" class="btn-outline-cta" data-i18n="svc_sh_port">Xem Portfolio</a>
           </div>
         </div>
       </div>
